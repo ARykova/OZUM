@@ -56,15 +56,31 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="ChangeScheduleView.xaml.cs">
+      <DependentUpon>ChangeScheduleView.xaml</DependentUpon>
+    </Compile>
     <Compile Include="FillApplicationView.xaml.cs">
       <DependentUpon>FillApplicationView.xaml</DependentUpon>
     </Compile>
     <Compile Include="GroupView.xaml.cs">
       <DependentUpon>GroupView.xaml</DependentUpon>
     </Compile>
+    <Compile Include="NewEventView.xaml.cs">
+      <DependentUpon>NewEventView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="OrganizerView.xaml.cs">
+      <DependentUpon>OrganizerView.xaml</DependentUpon>
+    </Compile>
     <Compile Include="RegistrationView.xaml.cs">
       <DependentUpon>RegistrationView.xaml</DependentUpon>
     </Compile>
+    <Compile Include="ShowEventDetailsView.xaml.cs">
+      <DependentUpon>ShowEventDetailsView.xaml</DependentUpon>
+    </Compile>
+    <Page Include="ChangeScheduleView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="FillApplicationView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -85,7 +101,19 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="NewEventView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="OrganizerView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="RegistrationView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ShowEventDetailsView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

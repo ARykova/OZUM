@@ -7,7 +7,7 @@
         mc:Ignorable="d"
         Title="Личный кабинет участника" Height="316" Width="568">
     <Grid>
-        <Label Content="Вы Вошли, как " HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,0,0,0"/>
+        <Label Content="Вы вошли, как " HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,0,0,0"/>
         <Button x:Name="buttonFillApplication" Content="Подать заявку" HorizontalAlignment="Left" Margin="446,72,0,0" VerticalAlignment="Top" Width="100" Height="40" Click="buttonFillApplication_Click"/>
         <Button HorizontalAlignment="Left" Margin="446,117,0,0" VerticalAlignment="Top" Width="100" Height="40">
             <TextBlock x:Name="buttonChangeProfile" Text="Редактировать профиль"

@@ -33,8 +33,19 @@ namespace OZUM
 
         private void buttonLogIn_Click(object sender, RoutedEventArgs e)
         {
-            var grWindow = new GroupView();
-            grWindow.Show();
+            int i = 0;
+
+            if (i == 5)
+            {
+                var grWindow = new GroupView();
+                grWindow.Show();
+            }
+
+            else
+            {
+                var orgWindow = new OrganizerView();
+                orgWindow.Show();
+            }
         }
     }
 }
