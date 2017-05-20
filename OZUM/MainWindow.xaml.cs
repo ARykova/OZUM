@@ -30,5 +30,11 @@ namespace OZUM
             var regWindow = new RegistrationView();
             regWindow.Show();
         }
+
+        private void buttonLogIn_Click(object sender, RoutedEventArgs e)
+        {
+            var grWindow = new GroupView();
+            grWindow.Show();
+        }
     }
 }

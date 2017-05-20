@@ -5,11 +5,26 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:OZUM"
         mc:Ignorable="d"
-        Title="Личный кабинет участника" Height="300" Width="492">
+        Title="Личный кабинет участника" Height="316" Width="568">
     <Grid>
         <Label Content="Вы Вошли, как " HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,0,0,0"/>
-        <Button Content="Подать заявку" HorizontalAlignment="Left" Margin="350,29,0,0" VerticalAlignment="Top" Width="104" Height="29"/>
-        <Button Content="Редактировать профиль" HorizontalAlignment="Left" Margin="350,63,0,0" VerticalAlignment="Top" Width="104" Height="43"/>
+        <Button x:Name="buttonFillApplication" Content="Подать заявку" HorizontalAlignment="Left" Margin="446,72,0,0" VerticalAlignment="Top" Width="100" Height="40" Click="buttonFillApplication_Click"/>
+        <Button HorizontalAlignment="Left" Margin="446,117,0,0" VerticalAlignment="Top" Width="100" Height="40">
+            <TextBlock x:Name="buttonChangeProfile" Text="Редактировать профиль"
+                       TextWrapping="Wrap"
+                       TextAlignment="Center"/>
+        </Button>
+        <Button x:Name="buttonLogOut" Content="Выйти" HorizontalAlignment="Left" Margin="446,228,0,0" VerticalAlignment="Top" Width="100" Height="40"/>
+        <Label Content="Мероприятия:" HorizontalAlignment="Left" Margin="30,37,0,0" VerticalAlignment="Top"/>
+        <ListBox x:Name="listBoxEvent" HorizontalAlignment="Left" Height="176" Margin="30,67,0,0" VerticalAlignment="Top" Width="195"/>
+        <Label x:Name="listBoxRegistration" Content="Необработанные заявки:" HorizontalAlignment="Left" Margin="239,37,0,0" VerticalAlignment="Top"/>
+        <ListBox HorizontalAlignment="Left" Height="176" Margin="239,67,0,0" VerticalAlignment="Top" Width="195"/>
+        <ComboBox HorizontalAlignment="Left" Margin="124,39,0,0" VerticalAlignment="Top" Width="100" RenderTransformOrigin="0.492,0.136" SelectedIndex="0">
+            <TextBlock>Все</TextBlock>
+            <TextBlock>Предстоящие</TextBlock>
+            <TextBlock>Прошедшие</TextBlock>
+        </ComboBox>
+        <Button x:Name="buttonShowEventDetails" Content="Подробнее..." HorizontalAlignment="Left" Margin="30,248,0,0" VerticalAlignment="Top" Width="195"/>
 
     </Grid>
 </Window>

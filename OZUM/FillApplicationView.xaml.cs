@@ -15,19 +15,13 @@ using System.Windows.Shapes;
 namespace OZUM
 {
     /// <summary>
-    /// Interaction logic for GroupView.xaml
+    /// Interaction logic for FillApplicationView.xaml
     /// </summary>
-    public partial class GroupView : Window
+    public partial class FillApplicationView : Window
     {
-        public GroupView()
+        public FillApplicationView()
         {
             InitializeComponent();
-        }
-
-        private void buttonFillApplication_Click(object sender, RoutedEventArgs e)
-        {
-            var faWindow = new FillApplicationView();
-            faWindow.Show();
         }
     }
 }
