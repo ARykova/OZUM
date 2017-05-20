@@ -5,8 +5,11 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:OZUM"
         mc:Ignorable="d"
-        Title="MainWindow" Height="350" Width="525">
+        Title="Авторизация" Height="350" Width="525">
     <Grid>
-        
+        <Label Content="Добро пожаловать в АИС ОЗУМ! Пожалуйста, войдите или зарегистрируйтесь:" HorizontalAlignment="Left" Margin="35,24,0,0" VerticalAlignment="Top"/>
+        <Label Content="Логин:" HorizontalAlignment="Left" Height="30" Margin="125,73,0,0" VerticalAlignment="Top" Width="60" RenderTransformOrigin="0.87,0.467"/>
+        <Label Content="Пароль:" HorizontalAlignment="Left" Height="30" Margin="125,103,0,0" VerticalAlignment="Top" Width="60"/>
+
     </Grid>
 </Window>
