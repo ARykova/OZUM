@@ -1,0 +1,15 @@
+﻿<Window x:Name="GroupView1" x:Class="OZUM.GroupView"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:OZUM"
+        mc:Ignorable="d"
+        Title="Личный кабинет участника" Height="300" Width="492">
+    <Grid>
+        <Label Content="Вы Вошли, как " HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,0,0,0"/>
+        <Button Content="Подать заявку" HorizontalAlignment="Left" Margin="350,29,0,0" VerticalAlignment="Top" Width="104" Height="29"/>
+        <Button Content="Редактировать профиль" HorizontalAlignment="Left" Margin="350,63,0,0" VerticalAlignment="Top" Width="104" Height="43"/>
+
+    </Grid>
+</Window>

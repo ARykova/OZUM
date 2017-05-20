@@ -10,25 +10,18 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
 using System.Windows.Shapes;
 
 namespace OZUM
 {
     /// <summary>
-    /// Interaction logic for MainWindow.xaml
+    /// Interaction logic for GroupView.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class GroupView : Window
     {
-        public MainWindow()
+        public GroupView()
         {
             InitializeComponent();
-        }
-
-        private void Button_Click(object sender, RoutedEventArgs e)
-        {
-            var regWindow = new RegistrationView();
-            regWindow.Show();
         }
     }
 }
