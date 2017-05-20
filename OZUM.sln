@@ -1,9 +1,11 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
-VisualStudioVersion = 15.0.26228.10
+VisualStudioVersion = 15.0.26228.9
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OZUM", "OZUM\OZUM.csproj", "{888852C9-CDC0-4702-8B61-761EB87DE474}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Model", "Model\Model.csproj", "{F21D3AB1-0EAD-454B-B646-E2C535E8F290}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,10 @@ Global
 		{888852C9-CDC0-4702-8B61-761EB87DE474}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{888852C9-CDC0-4702-8B61-761EB87DE474}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{888852C9-CDC0-4702-8B61-761EB87DE474}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F21D3AB1-0EAD-454B-B646-E2C535E8F290}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F21D3AB1-0EAD-454B-B646-E2C535E8F290}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F21D3AB1-0EAD-454B-B646-E2C535E8F290}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F21D3AB1-0EAD-454B-B646-E2C535E8F290}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
