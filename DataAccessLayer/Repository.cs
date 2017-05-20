@@ -23,7 +23,7 @@ namespace DataAccessLayer
             return Organizers;
         }
 
-        public List<Organizer> GetGroups()
+        public List<Group> GetGroups()
         {
             List<Organizer> Groups = new List<Organizer>();
             Groups.Add(new Organizer
