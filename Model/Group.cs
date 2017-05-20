@@ -6,28 +6,19 @@ using System.Threading.Tasks;
 
 namespace Model
 {
-    public class Group
+    public class Group: ILoginable
     {
-        public Group(string login, string password, string name, string mail, int telephone, string inforamtion)
-        {
-            Login = login;
-            Password = password;
-            Name = name;
-            Mail = mail;
-            Telephone = telephone;
-            Information = inforamtion;
-        }
+        public int Id { get; set; }
 
-        public string Login;
-        public string Password;
+        public string Login { get; set; }
+        public string Password { get; set; }
 
-        public string Name;
-        public string Information;
-        public int Telephone;
-        public string Mail;
+        public string Name { get; set; }
+        public string Information { get; set; }
+        public int Telephone { get; set; }
+        public string Mail { get; set; }
 
-        List<OrganizeEvent> LastEvents;
-        List<OrganizeEvent> UpcommingEvents;
-        List<OrganizeEvent> OutgoingApplications;
+        public List<OrganizeEvent> AllEvents;
+        public List<OrganizeEvent> OutgoingApplications;
     }
 }

@@ -4,11 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Model
+namespace ViewModel
 {
-    public class SchedulePart
+    public class MainWindowViewModel
     {
-        public Group Member;
-        public DateTime Duration;
     }
 }

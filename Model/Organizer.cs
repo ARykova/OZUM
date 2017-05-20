@@ -6,27 +6,16 @@ using System.Threading.Tasks;
 
 namespace Model
 {
-    public class Organizer
+    public class Organizer: ILoginable
     {
-        public Organizer(string login, string password, string name, string mail, int telephone, string inforamtion)
-        {
-            Login = login;
-            Password = password;
-            Name = name;
-            Mail = mail;
-            Telephone = telephone;
-            Information = inforamtion;
-        }
+        public string Login { get; set; }
+        public string Password { get; set; }
 
-        public string Login;
-        public string Password;
+        public string Name { get; set; }
+        public string Information { get; set; }
+        public string Telephone { get; set; }
+        public string Mail { get; set; }
 
-        public string Name;
-        public string Information;
-        public int Telephone;
-        public string Mail;
-
-        List<OrganizeEvent> LastEvents;
-        List<OrganizeEvent> UpcommingEvents;
+        List<OrganizeEvent> AllEvents;
     }
 }

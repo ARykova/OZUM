@@ -8,13 +8,15 @@ namespace Model
 {
     public class OrganizeEvent
     {
-        public string Name;
-        public Organizer EventsOrganizer;
-        public string Information;
-        List<SchedulePart> Schedule;
+        public int Id { get; set; }
 
-        public DateTime Start;
-        public DateTime Finish;
+        public string Name { get; set; }
+        public Organizer EventsOrganizer { get; set; }
+        public string Information { get; set; }
+        Schedule Schedule { get; set; }
+
+        public DateTime Start { get; set; }
+        public DateTime Finish { get; set; }
 
         List<Group> OnRegistration;
     }
