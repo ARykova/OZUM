@@ -1,0 +1,31 @@
+﻿<Window x:Class="OZUM.RegistrationView"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:OZUM"
+        mc:Ignorable="d"
+        Title="Регистрация" Height="377.5" Width="353">
+    <Grid Margin="5,5,5,5">
+        <Label Content="*Вы: " HorizontalAlignment="Left" Margin="122,74,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.548,0.423"/>
+        <RadioButton x:Name="radioButtonGroup" Content="Участник" HorizontalAlignment="Left" Margin="158,80,0,0" VerticalAlignment="Top" Checked="radioButtonGroup_Checked"/>
+        <RadioButton x:Name="radioButtonOrganizer" Content="Организатор" HorizontalAlignment="Left" Margin="158,98,0,0" VerticalAlignment="Top" Checked="radioButtonOrganizer_Checked"/>
+        <Label Content="*Логин:" HorizontalAlignment="Left" Margin="104,24,0,0" VerticalAlignment="Top"/>
+        <Label Content="*Пароль:" HorizontalAlignment="Left" Margin="96,50,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="textBoxLogin" HorizontalAlignment="Left" Height="20" Margin="160,28,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="150" KeyUp="textBoxLogin_KeyUp"/>
+        <TextBox x:Name="textBoxPassword" HorizontalAlignment="Left" Height="20" Margin="160,52,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="150" KeyUp="textBoxPassword_KeyUp"/>
+        <Label Content="*Имя (Название группы):" HorizontalAlignment="Left" Margin="8,112,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="textBoxName" HorizontalAlignment="Left" Height="20" Margin="160,118,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="150" KeyUp="textBoxName_KeyUp"/>
+        <Label Content="*Email:" HorizontalAlignment="Left" Margin="108,138,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="textBoxEmail" HorizontalAlignment="Left" Height="20" Margin="160,142,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="150" KeyUp="textBoxEmail_KeyUp"/>
+        <Label Content="*Телефон:" HorizontalAlignment="Left" Margin="90,164,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="textBoxPhone" HorizontalAlignment="Left" Height="20" Margin="160,168,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="150" KeyUp="textBoxPhone_KeyUp"/>
+        <Label Content="Дополнительная" HorizontalAlignment="Left" Margin="52,196,0,0" VerticalAlignment="Top"/>
+        <TextBox HorizontalAlignment="Left" Height="90" Margin="160,196,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="150"/>
+        <Button Content="Отменить" HorizontalAlignment="Left" Margin="66,304,0,0" VerticalAlignment="Top" Width="74"/>
+        <Button x:Name="buttonReg" Content="Зарегистрировать" HorizontalAlignment="Left" Margin="158,304,0,0" VerticalAlignment="Top" Width="150" Click="Button_Click" IsEnabled="False"/>
+        <Label Content="Поля, отмеченные *, обязательны для заполнения" HorizontalAlignment="Left" Margin="24,2,0,0" VerticalAlignment="Top"/>
+        <Label Content="информация:" HorizontalAlignment="Left" Margin="70,208,0,0" VerticalAlignment="Top"/>
+
+    </Grid>
+</Window>
