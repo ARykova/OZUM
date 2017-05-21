@@ -8,7 +8,7 @@
         Title="Редактирование профиля" Height="316.733" Width="321.514">
     <Grid>
         <TextBlock HorizontalAlignment="Left" Margin="114,28,0,0" TextWrapping="Wrap" Text="Пароль:" VerticalAlignment="Top"/>
-        <TextBlock HorizontalAlignment="Left" Margin="26,58,0,0" TextWrapping="Wrap" Text="Имя (Название группы):" VerticalAlignment="Top"/>
+        <TextBlock HorizontalAlignment="Left" Margin="56,52,0,0" TextWrapping="Wrap" Text="Название группы" VerticalAlignment="Top"/>
         <TextBlock HorizontalAlignment="Left" Margin="63,88,0,0" TextWrapping="Wrap" TextAlignment="Right" Text="Дополнительная информация:" VerticalAlignment="Top" Width="95"/>
         <TextBlock HorizontalAlignment="Left" Margin="108,179,0,0" TextWrapping="Wrap" Text="Телефон:" VerticalAlignment="Top"/>
         <TextBlock HorizontalAlignment="Left" Margin="127,208,0,0" TextWrapping="Wrap" Text="Email:" VerticalAlignment="Top"/>
@@ -20,6 +20,7 @@
         <TextBlock HorizontalAlignment="Left" Margin="43,5,0,0" TextWrapping="Wrap" Text="Вы вошли, как" VerticalAlignment="Top"/>
         <Button x:Name="buttonSaveProfileChanges" Content="Сохранить изменения" HorizontalAlignment="Left" Margin="143,236,0,0" VerticalAlignment="Top" Width="140" Height="27" IsEnabled="False"/>
         <Button x:Name="buttonCancel" Command="{Binding CancelClick}" Content="Отменить" HorizontalAlignment="Left" Margin="43,236,0,0" VerticalAlignment="Top" Width="95" Height="27"/>
+        <Label Content="или организации:" HorizontalAlignment="Left" Margin="53,60,0,0" VerticalAlignment="Top"/>
 
     </Grid>
 </local:ViewBase>
