@@ -18,6 +18,7 @@ namespace Model
         string Telephone { get; set; }
         string Mail { get; set; }
 
-        bool IsOrganizer { get; set; }    
+        bool IsOrganizer { get; set; }
+        
     }
 }

@@ -18,6 +18,6 @@ namespace Model
         public DateTime Start { get; set; }
         public DateTime Finish { get; set; }
 
-        List<Group> OnRegistration;
+        List<Group> OnRegistration { get; set; }
     }
 }

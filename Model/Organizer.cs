@@ -16,5 +16,7 @@ namespace Model
         public string Telephone { get; set; }
         public string Mail { get; set; }
         public bool IsOrganizer { get; set; }
+
+        public List<OrganizeEvent> AllIvents { get; set; }
     }
 }
