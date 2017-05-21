@@ -4,11 +4,19 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Model;
 
 namespace ViewModel
 {
     public class GroupViewModel : ViewModelBase
     {
+        public Group CurrentGroup { get; set; }
+
+
+
+
+
+        //Кнопки
         private RelayCommand _fillAppClick;
         public RelayCommand FillAppClick
         {

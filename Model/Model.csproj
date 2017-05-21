@@ -40,7 +40,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Apply.cs" />
     <Compile Include="Group.cs" />
     <Compile Include="Organizer.cs" />
     <Compile Include="IUser.cs" />
