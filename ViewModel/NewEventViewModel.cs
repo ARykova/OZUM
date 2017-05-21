@@ -11,7 +11,6 @@ namespace ViewModel
 {
     public class NewEventViewModel : ViewModelBase
     {
-        public SQLRepository rep = new SQLRepository();
         public string NewName { get; set; }
         public DateTime NewStart { get; set; }
         public DateTime NewEnd { get; set; }
@@ -35,14 +34,17 @@ namespace ViewModel
         }
         private void OnSaveNewEventClick()
         {
-            rep.AddOrganizeEvent(new OrganizeEvent
+            var rep = new SQLRepository();
+            OrganizeEvent NewOrgEvent = new OrganizeEvent()
             {
                 Name = NewName,
                 Start = NewStart,
                 Finish = NewEnd,
                 Information = NewInformation,
                 EventsOrganizer = CurentOrg
-            });
+            };
+            rep.AddOrganizeEvent(NewOrgEvent);            
+            rep.Save();
         }
     }
 }

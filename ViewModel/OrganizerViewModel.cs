@@ -31,7 +31,7 @@ namespace ViewModel
         private void OnNewEventClick()
         {
             
-            NewEventViewModel neViewModel = new NewEventViewModel();
+            NewEventViewModel neViewModel = new NewEventViewModel() { CurentOrg = CurentOrg };
             ViewModelManager.Instance.ViewModelShow(neViewModel);
         }
 
