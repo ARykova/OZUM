@@ -5,10 +5,23 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:OZUM"
         mc:Ignorable="d"
-        Title="Описание мероприятия" Height="300" Width="234">
+        Title="Описание мероприятия" Height="300" Width="351.582">
     <Grid>
-        <TextBox HorizontalAlignment="Left" Height="220" Margin="10,10,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="203"/>
-        <Button Content="Ок" Command="{Binding OkClick}" HorizontalAlignment="Left" Margin="75,235,0,0" VerticalAlignment="Top" Width="75" Height="24"/>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="114*"/>
+            <RowDefinition Height="155*"/>
+        </Grid.RowDefinitions>
+        <TextBox Text="{Binding Path=Eventyshe.Name}" IsReadOnly="True" HorizontalAlignment="Left" Height="26" Margin="118,10,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="203"/>
+        <Button Content="Ок" Command="{Binding OkClick}" HorizontalAlignment="Left" Margin="181,121,0,0" VerticalAlignment="Top" Width="140" Height="24" Grid.Row="1"/>
+        <TextBox Text="{Binding Path=Eventyshe.EventsOrganizer.Name}" IsReadOnly="True" HorizontalAlignment="Left" Height="26" Margin="118,41,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="203"/>
+        <TextBox Text="{Binding Path=Eventyshe.Information}" IsReadOnly="True" HorizontalAlignment="Left" Height="86" Margin="118,72,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="203" Grid.RowSpan="2"/>
+        <TextBox Text="{Binding Path=Eventyshe.Start}" IsReadOnly="True"  HorizontalAlignment="Left" Height="26" Margin="118,49,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="203" Grid.Row="1"/>
+        <TextBox Text="{Binding Path=Eventyshe.Finish}" IsReadOnly="True" HorizontalAlignment="Left" Height="26" Margin="118,80,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="203" Grid.Row="1"/>
+        <Label Content="Название:" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Width="93"/>
+        <Label Content="Организатор:" HorizontalAlignment="Left" Margin="10,41,0,0" VerticalAlignment="Top" Width="93"/>
+        <Label Content="Доп. инф:" HorizontalAlignment="Left" Margin="10,78,0,0" VerticalAlignment="Top" Width="93"/>
+        <Label Content="Начало:" HorizontalAlignment="Left" Margin="10,49,0,0" VerticalAlignment="Top" Width="93" Grid.Row="1"/>
+        <Label Content="Конец:" HorizontalAlignment="Left" Margin="10,80,0,0" VerticalAlignment="Top" Width="93" Grid.Row="1"/>
 
     </Grid>
 </local:ViewBase>
