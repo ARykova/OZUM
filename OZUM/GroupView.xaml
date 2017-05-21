@@ -16,10 +16,10 @@
         </Button>
         <Button x:Name="buttonLogOut" Command="{Binding LogOutClick}" Content="Выйти" HorizontalAlignment="Left" Margin="446,228,0,0" VerticalAlignment="Top" Width="100" Height="40"/>
         <Label Content="Мероприятия:" HorizontalAlignment="Left" Margin="30,37,0,0" VerticalAlignment="Top"/>
-        <ListBox ItemsSource="{Binding CurentGroup.AllIvents}" DisplayMemberPath="Name" x:Name="listBoxEvent" HorizontalAlignment="Left" Height="176" Margin="30,67,0,0" VerticalAlignment="Top" Width="195"/>
         <Label x:Name="listBoxRegistration" Content="Необработанные заявки:" HorizontalAlignment="Left" Margin="239,37,0,0" VerticalAlignment="Top"/>
-        <ListBox HorizontalAlignment="Left" Height="176" Margin="239,67,0,0" VerticalAlignment="Top" Width="195"/>
-        <Button x:Name="buttonShowEventDetails" Command="{Binding ShowEventDetailsClick}" Content="Подробнее..." HorizontalAlignment="Left" Margin="30,248,0,0" VerticalAlignment="Top" Width="195"/>
+        <Button x:Name="buttonShowEventDetails" Command="{Binding ShowEventDetailsClick}" HorizontalAlignment="Left" Margin="30,248,0,0" VerticalAlignment="Top" Width="195">Подробнее...</Button>
+        <ListView ItemsSource="{Binding Accepted}" DisplayMemberPath="OE.Name"  SelectedItem="{Binding Chosen}" HorizontalAlignment="Left" Height="176" Margin="30,67,0,0" VerticalAlignment="Top" Width="195"></ListView>
+        <ListView ItemsSource="{Binding NotAccepted}" DisplayMemberPath="OE.Name" SelectedItem="{Binding Chosen}" HorizontalAlignment="Left" Height="176" Margin="239,67,0,0" VerticalAlignment="Top" Width="193"></ListView>
 
     </Grid>
 </local:ViewBase>

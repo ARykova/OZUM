@@ -4,11 +4,14 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Model;
 
 namespace ViewModel
 {
     public class ShowEventDetailsViewModel : ViewModelBase
     {
+        public OrganizeEvent Eventyshe { get; set; }
+
         private RelayCommand _okClick;
         public RelayCommand OkClick
         {

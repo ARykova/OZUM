@@ -78,9 +78,23 @@ namespace ViewModel
         {
             foreach (Group obj in Groups)
             {
+                List<SchedulePart> accepted = new List<SchedulePart>();
+                List<SchedulePart> notaccepted = new List<SchedulePart>();
+
                 if (obj.Login == LoginField)
                 {
-                    GroupViewModel grViewModel = new GroupViewModel();
+                    foreach (SchedulePart sp in obj.Applies)
+                    {
+                        if (sp.IsChecked)
+                        {
+                            accepted.Add(sp);
+                        }
+                        else
+                        {
+                            notaccepted.Add(sp);
+                        }
+                    }
+                    GroupViewModel grViewModel = new GroupViewModel() { CurrentGroup = obj, Accepted = accepted, NotAccepted = notaccepted};
                     ViewModelManager.Instance.ViewModelShow(grViewModel);
                 }
             }

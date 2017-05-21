@@ -11,7 +11,14 @@ namespace ViewModel
     public class GroupViewModel : ViewModelBase
     {
         public Group CurrentGroup { get; set; }
+        public List<SchedulePart> Accepted { get; set; }
+        public List<SchedulePart> NotAccepted { get; set; }
+        public SchedulePart Chosen { get; set; }
 
+        public GroupViewModel()
+        {
+
+        }
 
 
 
@@ -37,7 +44,7 @@ namespace ViewModel
         }
         private void OnShowEventDetailsClick()
         {
-            ShowEventDetailsViewModel sedViewModel = new ShowEventDetailsViewModel();
+            ShowEventDetailsViewModel sedViewModel = new ShowEventDetailsViewModel() { Eventyshe = Chosen.OE};
             ViewModelManager.Instance.ViewModelShow(sedViewModel);
         }
 
