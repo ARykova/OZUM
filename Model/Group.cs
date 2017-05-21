@@ -17,8 +17,8 @@ namespace Model
         public string Mail { get; set; }
         public bool IsOrganizer { get; set; }
 
-        public List<OrganizeEvent> AllEvents { get; set; }
-        public List<OrganizeEvent> UpgoingEvents { get; set; }
+        //public List<OrganizeEvent> AllEvents { get; set; }
+        //public List<OrganizeEvent> UpgoingEvents { get; set; }
 
     }
 }

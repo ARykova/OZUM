@@ -16,7 +16,6 @@
                     <TextBlock Text="Прошедшие" />
 
                 </ComboBox>
-                <ListBox HorizontalAlignment="Left" Height="188" Margin="10,41,0,0" VerticalAlignment="Top" Width="214"/>
                 <Button x:Name="buttonNewEvent" Command="{Binding NewEventClick}" HorizontalAlignment="Left" Margin="239,19,0,0" VerticalAlignment="Top" Width="91" Height="60">
                     <TextBlock Height="56" Width="81" TextWrapping="Wrap" TextAlignment="Center">Добавить новое мероприятие</TextBlock>
                 </Button>
@@ -24,6 +23,13 @@
                     <TextBlock Height="35" Width="70" TextWrapping="Wrap" TextAlignment="Center">Изменить расписание</TextBlock>
                 </Button>
                 <Button x:Name="buttonShowEventDetails" Command="{Binding ShowEventDetailsClick}" Content="Подробнее..." HorizontalAlignment="Left" Margin="239,159,0,0" VerticalAlignment="Top" Width="91" Height="60"/>
+                <ListView ItemsSource="{Binding CurentOrgEvents}" DisplayMemberPath="Name" HorizontalAlignment="Left" Height="194" Margin="10,39,0,0" VerticalAlignment="Top" Width="214">
+                    <ListView.View>
+                        <GridView>
+                            <GridViewColumn/>
+                        </GridView>
+                    </ListView.View>
+                </ListView>
             </Grid>
         </GroupBox>
         <GroupBox Header="Заявки" HorizontalAlignment="Left" Height="265" Margin="380,25,0,0" VerticalAlignment="Top" Width="355">
@@ -41,7 +47,7 @@
             </Grid>
         </GroupBox>
         <TextBlock HorizontalAlignment="Left" Margin="10,0,0,0" TextWrapping="Wrap" Text="Вы вошли, как" VerticalAlignment="Top"/>
+        <TextBlock HorizontalAlignment="Left" Margin="100,0,0,0" Text="{Binding CurentOrg.Login}" TextWrapping="Wrap" VerticalAlignment="Top"/>
         <Button x:Name="buttonLogOut" Command="{Binding LogOutClick}" Content="Выйти" HorizontalAlignment="Left" Margin="630,295,0,0" VerticalAlignment="Top" Width="91" Height="25"/>
-        <Button Command="{Binding ChangeProfileClick}" Content="Редактировать Профиль" HorizontalAlignment="Left" Margin="568,0,0,0" VerticalAlignment="Top" Width="167"/>
     </Grid>
 </local:ViewBase>

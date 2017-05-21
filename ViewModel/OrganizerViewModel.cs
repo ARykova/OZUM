@@ -4,11 +4,21 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Model;
+using DataAccessLayer;
 
 namespace ViewModel
 {
     public class OrganizerViewModel : ViewModelBase
     {
+        public OrganizerViewModel()
+        {
+            
+        }
+
+        public List<OrganizeEvent> CurentOrgEvents { get; set;}
+        public Organizer CurentOrg { get; set; }
+
         private RelayCommand _newEventClick;
         public RelayCommand NewEventClick
         {

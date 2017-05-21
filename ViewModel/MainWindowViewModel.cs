@@ -16,7 +16,20 @@ namespace ViewModel
 
         public MainWindowViewModel()
         {            
-            var rep = new Repository();
+            var rep = new SQLRepository();
+
+            //var group1 = new Group { Login = "1", Password = "1", Mail = " 123", Telephone = "12345", Name = "Dada", IsOrganizer = false };
+            //var org1 = new Organizer { Name = "Fedor", IsOrganizer = true, Telephone = "123", Mail = "123", Password = "123", Login = "123"};
+
+            //var event1 = new OrganizeEvent { Name = "event1", Start = DateTime.Parse("12.02.2017"), Finish = DateTime.Parse("12.04.2017"), EventsOrganizer = org1 };
+            //var event2 = new OrganizeEvent { Name = "event2", Start = DateTime.Parse("12.02.2017"), Finish = DateTime.Parse("12.04.2017"), EventsOrganizer = org1 };
+
+            //rep.AddGroup(group1);
+            //rep.AddOrganizer(org1);
+            //rep.AddOrganizeEvent(event1);
+            //rep.AddOrganizeEvent(event2);
+            //rep.Save();
+
             Organizers = rep.GetOrganizers();
             Groups = rep.GetGroups();
         }
@@ -54,7 +67,7 @@ namespace ViewModel
             {
                 if (obj.Login == LoginField)
                 {
-                    OrganizerViewModel orgViewModel = new OrganizerViewModel();
+                    OrganizerViewModel orgViewModel = new OrganizerViewModel() { CurentOrg = obj, CurentOrgEvents = obj.AllIvents };
                     ViewModelManager.Instance.ViewModelShow(orgViewModel);
                 }
             }
