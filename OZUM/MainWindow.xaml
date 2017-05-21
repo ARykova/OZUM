@@ -12,7 +12,7 @@
         <Label Content="Пароль:" HorizontalAlignment="Left" Height="30" Margin="167,94,0,0" VerticalAlignment="Top" Width="60"/>
         <TextBox HorizontalAlignment="Left" Height="20" Margin="220,69,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
         <TextBox HorizontalAlignment="Left" Height="20" Margin="220,99,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
-        <Button x:Name="buttonLogIn" Content="Вход" HorizontalAlignment="Left" Height="25" Margin="175,129,0,0" VerticalAlignment="Top" Width="165" Click="buttonLogIn_Click"/>
+        <Button Command="{Binding LoginClick}" x:Name="buttonLogIn" Content="Вход" HorizontalAlignment="Left" Height="25" Margin="175,129,0,0" VerticalAlignment="Top" Width="165" Click="buttonLogIn_Click"/>
         <Button Command="{Binding RegistrationClick}"  Content="Регистрация" HorizontalAlignment="Left" Margin="175,159,0,0" VerticalAlignment="Top" Width="165" Height="25"/>
     </Grid>
 </local:ViewBase>

@@ -37,5 +37,17 @@ namespace ViewModel
             RegistrationViewModel registrationViewModel = new RegistrationViewModel() { UsersReg = Users};
             ViewModelManager.Instance.ViewModelShow(registrationViewModel);
         }
+
+        private RelayCommand _loginClick;
+        public RelayCommand LoginClick
+        {
+            get { return _loginClick ?? (_loginClick = new RelayCommand(OnLoginClick)); }
+        }
+        private void OnLoginClick()
+        {
+
+            OrganizerViewModel orgViewModel = new OrganizerViewModel();
+            ViewModelManager.Instance.ViewModelShow(orgViewModel);
+        }
     }
 }
