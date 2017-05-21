@@ -6,12 +6,13 @@ using System.Threading.Tasks;
 
 namespace Model
 {
-    public class Schedule
+    public class SchedulePart
     {
         public int Id { get; set; }
 
         public virtual OrganizeEvent OE { get; set; }
         public Group Member { get; set; }
         public DateTime Duration { get; set; }
+        public bool IsChecked { get; set; }
     }
 }

@@ -13,11 +13,10 @@ namespace ViewModel
     {
         public OrganizerViewModel()
         {
-            
         }
 
-        public List<OrganizeEvent> CurentOrgEvents { get; set;}
         public Organizer CurentOrg { get; set; }
+        public List<OrganizeEvent> CurentOrgEvents { get; set;}        
 
         private RelayCommand _newEventClick;
         public RelayCommand NewEventClick

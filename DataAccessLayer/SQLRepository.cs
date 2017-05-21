@@ -22,20 +22,20 @@ namespace DataAccessLayer
             return _context.Organizers.ToList();
         }
         
-        public List<Apply> GetApplies()
-        {
-            return _context.Applies.ToList();
-        }
+        //public List<Apply> GetApplies()
+        //{
+        //    return _context.Applies.ToList();
+        //}
 
         public List<OrganizeEvent> GetEvents()
         {
             return _context.OrganizeEvents.ToList();
         }
 
-        public void AddApply(Apply a)
-        {
-            _context.Applies.Add(a);
-        }
+        //public void AddApply(Apply a)
+        //{
+        //    _context.Applies.Add(a);
+        //}
 
         public void AddGroup(Group g)
         {
@@ -52,7 +52,7 @@ namespace DataAccessLayer
             _context.Organizers.Add(o);
         }
 
-        public void AddSchedule(Schedule s)
+        public void AddSchedule(SchedulePart s)
         {
             _context.Schedules.Add(s);
         }

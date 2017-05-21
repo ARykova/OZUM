@@ -9,7 +9,7 @@ namespace DataAccessLayer
 {
     interface IRepository
     {
-        List<Apply> GetApplies();
+        //List<Apply> GetApplies();
         List<OrganizeEvent> GetEvents();
     }
 }

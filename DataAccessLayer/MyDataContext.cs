@@ -13,8 +13,8 @@ namespace DataAccessLayer
     {
         public DbSet<Group> Groups { get; set; }
         public DbSet<Organizer> Organizers { get; set; }
-        public DbSet<Apply> Applies { get; set; }
+        //public DbSet<Apply> Applies { get; set; }
         public DbSet<OrganizeEvent> OrganizeEvents { get; set; }
-        public DbSet<Schedule> Schedules { get; set; }
+        public DbSet<SchedulePart> Schedules { get; set; }
     }
 }

@@ -46,7 +46,7 @@
     <Compile Include="IUser.cs" />
     <Compile Include="OrganizeEvent.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Schedule.cs" />
+    <Compile Include="SchedulePart.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

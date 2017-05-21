@@ -32,6 +32,22 @@ namespace ViewModel
 
             Organizers = rep.GetOrganizers();
             Groups = rep.GetGroups();
+
+            foreach (Organizer o in Organizers)
+            {
+                foreach(OrganizeEvent oe in rep.GetEvents())
+                {
+                    if (oe.EventsOrganizer.Id == o.Id) o.AllIvents.Add(oe);
+                }
+            }
+
+            //foreach (Group g in Groups)
+            //{
+            //    foreach (OrganizeEvent oe in rep.GetEvents())
+            //    {
+            //        if (oe.Schedule.Member.Id == g.Id) g.AllEvents.Add(oe);
+            //    }
+            //}
         }
 
 

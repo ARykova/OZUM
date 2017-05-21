@@ -23,12 +23,8 @@
                     <TextBlock Height="35" Width="70" TextWrapping="Wrap" TextAlignment="Center">Изменить расписание</TextBlock>
                 </Button>
                 <Button x:Name="buttonShowEventDetails" Command="{Binding ShowEventDetailsClick}" Content="Подробнее..." HorizontalAlignment="Left" Margin="239,159,0,0" VerticalAlignment="Top" Width="91" Height="60"/>
-                <ListView ItemsSource="{Binding CurentOrgEvents}" DisplayMemberPath="Name" HorizontalAlignment="Left" Height="194" Margin="10,39,0,0" VerticalAlignment="Top" Width="214">
-                    <ListView.View>
-                        <GridView>
-                            <GridViewColumn/>
-                        </GridView>
-                    </ListView.View>
+                <ListView x:Name="listViewOrgEvents" ItemsSource="{Binding CurentOrgEvents}" DisplayMemberPath="Name" HorizontalAlignment="Left" Height="194" Margin="10,39,0,0" VerticalAlignment="Top" Width="214">
+                    
                 </ListView>
             </Grid>
         </GroupBox>
