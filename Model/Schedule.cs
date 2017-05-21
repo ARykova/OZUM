@@ -11,7 +11,7 @@ namespace Model
         public int Id { get; set; }
 
         public virtual OrganizeEvent OE { get; set; }
-        public User Member { get; set; }
+        public Group Member { get; set; }
         public DateTime Duration { get; set; }
     }
 }

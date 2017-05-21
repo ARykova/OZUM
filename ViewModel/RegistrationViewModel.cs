@@ -10,11 +10,24 @@ namespace ViewModel
 {
     public class RegistrationViewModel : ViewModelBase
     {
-        public User RVMU { get; set; }
-        public List<User> UsersReg { get; set; }
+        //public IUser RVMU { get; set; }
+        public List<Group> GroupReg = new List<Group>();
+        public List<Organizer> OrgReg = new List<Organizer>();
+
+        public string RegLogin { get; set; }
+        public string RegPassword { get; set; }
+        public string RegName { get; set; }
+        public string RegInformation { get; set; }
+        public string RegTelephone { get; set; }
+        public string RegMail { get; set; }
+        public bool IsOrganizer { get; set; }
+
         public RegistrationViewModel()
         {
-            RVMU = new User();            
+            //RVMU = new IUser();
+            
+            
+
         }
 
         private RelayCommand _saveClick;
@@ -24,7 +37,52 @@ namespace ViewModel
         }
         private void OnSaveClick()
         {
-            UsersReg.Add(RVMU);
+            foreach (Organizer user in OrgReg)
+            {
+                if (user.Login == RegLogin)
+                {
+                    throw new Exception("Такой Логин уже используется");
+
+                }
+            }
+            foreach (Group user in GroupReg)
+            {
+                if (user.Login == RegLogin)
+                {
+                    throw new Exception("Такой Логин уже используется");
+
+                }
+            }
+
+            if(IsOrganizer)
+            {
+                OrgReg.Add(new Organizer
+                {
+                    Login = RegLogin,
+                    Password = RegPassword,
+                    Name = RegName,
+                    Telephone = RegTelephone,
+                    Mail = RegMail,
+                    Information = RegInformation,
+                    IsOrganizer = true
+                    
+                });
+            }
+            else
+            {
+                GroupReg.Add(new Group
+                {
+                    Login = RegLogin,
+                    Password = RegPassword,
+                    Name = RegName,
+                    Telephone = RegTelephone,
+                    Mail = RegMail,
+                    Information = RegInformation,
+                    IsOrganizer = false
+
+                });
+            }
+            
             Close();
         }
     }

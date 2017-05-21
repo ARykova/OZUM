@@ -9,27 +9,31 @@ namespace DataAccessLayer
 {
     public class Repository
     {
-        public List<User> GetUsers()
+        public List<Group> GetGroups()
         {
-            List<User> Users = new List<User>();
-            Users.Add(new User
-            {
-                Login = "123621",
-                Password = "123621",
-                Name = "Анечка",
-                Telephone = "8812848248",
-                Mail = "anna@milo.ru"
-            });
-            Users.Add(new User
+            List<Group> Groups = new List<Group>();
+            Groups.Add(new Group
             {
                 Login = "123",
                 Password = "123",
                 Name = "Миха",
-                Telephone = "88005553535",
+                Telephone = "8812848248",
                 Mail = "miha@milo.ru"
             });
-            return Users;
+            return Groups;
         }
-        
+        public List<Organizer> GetOrganizers()
+        {
+            List<Organizer> Organizers = new List<Organizer>();
+            Organizers.Add(new Organizer
+            {
+                Login = "123621",
+                Password = "123621",
+                Name = "Анечка",
+                Telephone = "88005553535",
+                Mail = "anna@milo.ru"
+            });
+            return Organizers;
+        }
     }
 }
