@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Model;
 using GalaSoft.MvvmLight.Command;
+using DataAccessLayer;
 
 namespace ViewModel
 {
@@ -54,6 +55,8 @@ namespace ViewModel
                 }
             }
 
+
+            var rep = new SQLRepository();
             if(IsOrganizer)
             {
                 OrgReg.Add(new Organizer
@@ -67,6 +70,9 @@ namespace ViewModel
                     //IsOrganizer = true
                     
                 });
+
+                rep.AddOrganizer(OrgReg[OrgReg.Count - 1]);
+                rep.Save();
             }
             else
             {
@@ -81,6 +87,8 @@ namespace ViewModel
                     //IsOrganizer = false
 
                 });
+                rep.AddGroup(GroupReg[GroupReg.Count - 1]);
+                rep.Save();
             }
             
             Close();
