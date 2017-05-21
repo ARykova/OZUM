@@ -10,12 +10,6 @@
         <GroupBox Header="Мероприятия" HorizontalAlignment="Left" Height="265" Margin="10,25,0,0" VerticalAlignment="Top" Width="355">
             <Grid>
                 <TextBlock HorizontalAlignment="Left" Margin="10,10,0,0" TextWrapping="Wrap" Text="Ваши мероприятия:" VerticalAlignment="Top"/>
-                <ComboBox x:Name="comboBoxOrgEvents" HorizontalAlignment="Left" Margin="124,8,0,0" VerticalAlignment="Top" Width="100" SelectedIndex="0">
-                    <TextBlock Text="Все" />
-                    <TextBlock Text="Предстоящие" />
-                    <TextBlock Text="Прошедшие" />
-
-                </ComboBox>
                 <Button x:Name="buttonNewEvent" Command="{Binding NewEventClick}" HorizontalAlignment="Left" Margin="239,19,0,0" VerticalAlignment="Top" Width="91" Height="60">
                     <TextBlock Height="56" Width="81" TextWrapping="Wrap" TextAlignment="Center">Добавить новое мероприятие</TextBlock>
                 </Button>
@@ -31,7 +25,7 @@
         <GroupBox Header="Заявки" HorizontalAlignment="Left" Height="265" Margin="380,25,0,0" VerticalAlignment="Top" Width="355">
             <Grid>
                 <TextBlock HorizontalAlignment="Left" Margin="10,10,0,0" TextWrapping="Wrap" Text="Необработанные заявки:" VerticalAlignment="Top"/>
-                <ComboBox HorizontalAlignment="Left" Margin="153,8,0,0" VerticalAlignment="Top" Width="71"/>
+                <ComboBox ItemsSource="{Binding CurentApplies}" HorizontalAlignment="Left" Margin="153,8,0,0" VerticalAlignment="Top" Width="71"/>
                 <TextBox HorizontalAlignment="Left" Height="188" Margin="10,41,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="214"/>
                 <Button x:Name="buttonAccept" HorizontalAlignment="Left" Margin="242,54,0,0" VerticalAlignment="Top" Width="91" Height="60">
                     <TextBlock TextAlignment="Center" TextWrapping="Wrap">Одобрить заявку</TextBlock>

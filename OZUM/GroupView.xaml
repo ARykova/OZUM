@@ -19,11 +19,6 @@
         <ListBox x:Name="listBoxEvent" HorizontalAlignment="Left" Height="176" Margin="30,67,0,0" VerticalAlignment="Top" Width="195"/>
         <Label x:Name="listBoxRegistration" Content="Необработанные заявки:" HorizontalAlignment="Left" Margin="239,37,0,0" VerticalAlignment="Top"/>
         <ListBox HorizontalAlignment="Left" Height="176" Margin="239,67,0,0" VerticalAlignment="Top" Width="195"/>
-        <ComboBox HorizontalAlignment="Left" Margin="124,39,0,0" VerticalAlignment="Top" Width="100" RenderTransformOrigin="0.492,0.136" SelectedIndex="0">
-            <TextBlock>Все</TextBlock>
-            <TextBlock>Предстоящие</TextBlock>
-            <TextBlock>Прошедшие</TextBlock>
-        </ComboBox>
         <Button x:Name="buttonShowEventDetails" Command="{Binding ShowEventDetailsClick}" Content="Подробнее..." HorizontalAlignment="Left" Margin="30,248,0,0" VerticalAlignment="Top" Width="195"/>
 
     </Grid>

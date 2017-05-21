@@ -13,9 +13,17 @@ namespace ViewModel
     {
         public OrganizerViewModel()
         {
+            foreach (OrganizeEvent oe in CurentOrg.AllIvents)
+            {
+                foreach(SchedulePart sp in oe.Schedule)
+                {
+                    if (!sp.IsChecked) CurentApplies.Add(sp); 
+                }
+            }
         }
 
         public Organizer CurentOrg { get; set; }
+        public List<SchedulePart> CurentApplies { get; set; }
         //public List<OrganizeEvent> CurentOrgEvents = new List<OrganizeEvent>;       
 
         private RelayCommand _newEventClick;
