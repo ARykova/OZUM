@@ -14,23 +14,11 @@ namespace ViewModel
         public Organizer CurentOrg { get; set; }
         //public List<SchedulePart> 
         public List<SchedulePart> CurentApplies { get; set; }
-
+        public SchedulePart CurentApply { get; set; }
         public OrganizerViewModel()
-        {
+        {        
             
-            
-        }
-
-
-        private RelayCommand _refreshClick;
-        public RelayCommand RefreshClick
-        {
-            get { return _refreshClick ?? (_refreshClick = new RelayCommand(OnRefreshClick)); }
-        }
-        private void OnRefreshClick()
-        {
-            
-        }
+        }       
 
         private RelayCommand _newEventClick;
         public RelayCommand NewEventClick
