@@ -17,7 +17,7 @@ namespace OZUM
     /// <summary>
     /// Interaction logic for FillApplicationView.xaml
     /// </summary>
-    public partial class FillApplicationView : Window
+    public partial class FillApplicationView : ViewBase
     {
         public FillApplicationView()
         {

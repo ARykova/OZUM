@@ -17,7 +17,7 @@ namespace OZUM
     /// <summary>
     /// Interaction logic for ShowEventDetailsView.xaml
     /// </summary>
-    public partial class ShowEventDetailsView : Window
+    public partial class ShowEventDetailsView : ViewBase
     {
         public ShowEventDetailsView()
         {

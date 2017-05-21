@@ -11,13 +11,14 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using ViewModel;
 
 namespace OZUM
 {
     /// <summary>
     /// Interaction logic for ChangeScheduleView.xaml
     /// </summary>
-    public partial class ChangeScheduleView : Window
+    public partial class ChangeScheduleView : ViewBase
     {
         public ChangeScheduleView()
         {

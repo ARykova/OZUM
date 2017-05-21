@@ -17,7 +17,7 @@ namespace OZUM
     /// <summary>
     /// Interaction logic for NewEventView.xaml
     /// </summary>
-    public partial class NewEventView : Window
+    public partial class NewEventView : ViewBase
     {
         public NewEventView()
         {

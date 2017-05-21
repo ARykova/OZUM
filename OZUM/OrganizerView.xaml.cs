@@ -17,7 +17,7 @@ namespace OZUM
     /// <summary>
     /// Interaction logic for OrganizerView.xaml
     /// </summary>
-    public partial class OrganizerView : Window
+    public partial class OrganizerView : ViewBase
     {
         public OrganizerView()
         {
