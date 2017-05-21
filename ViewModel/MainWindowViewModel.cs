@@ -33,6 +33,7 @@ namespace ViewModel
             Organizers = rep.GetOrganizers();
             Groups = rep.GetGroups();
             List<OrganizeEvent> tmpEvents = rep.GetEvents();
+            List<SchedulePart> tmpScheduleParts = rep.GetScheduleParts();
 
             //foreach (Organizer o in Organizers)
             //{
@@ -87,7 +88,7 @@ namespace ViewModel
             {
                 if (obj.Login == LoginField)
                 {
-                    OrganizerViewModel orgViewModel = new OrganizerViewModel() { CurentOrg = obj};
+                    OrganizerViewModel orgViewModel = new OrganizerViewModel() { CurentOrg = obj, Groups = Groups };
                     ViewModelManager.Instance.ViewModelShow(orgViewModel);
                 }
             }
