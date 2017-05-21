@@ -25,17 +25,22 @@
         <GroupBox Header="Заявки" HorizontalAlignment="Left" Height="265" Margin="380,25,0,0" VerticalAlignment="Top" Width="355">
             <Grid>
                 <TextBlock HorizontalAlignment="Left" Margin="10,10,0,0" TextWrapping="Wrap" Text="Необработанные заявки:" VerticalAlignment="Top"/>
-                <ComboBox ItemsSource="{Binding CurentApplies}" DisplayMemberPath="Id" HorizontalAlignment="Left" Margin="153,8,0,0" VerticalAlignment="Top" Width="71"/>
-                <Button x:Name="buttonAccept" HorizontalAlignment="Left" Margin="242,54,0,0" VerticalAlignment="Top" Width="91" Height="60">
+                <ComboBox SelectedItem ="{Binding CurentApply}" ItemsSource="{Binding CurentApplies}" DisplayMemberPath="Id" HorizontalAlignment="Left" Margin="153,8,0,0" VerticalAlignment="Top" Width="71"/>
+                <Button x:Name="buttonAccept" Command="{Binding AcceptClick}" HorizontalAlignment="Left" Margin="242,54,0,0" VerticalAlignment="Top" Width="91" Height="60">
                     <TextBlock TextAlignment="Center" TextWrapping="Wrap">Одобрить заявку</TextBlock>
                 </Button>
-                <Button x:Name="buttonReject" HorizontalAlignment="Left" Margin="242,124,0,0" VerticalAlignment="Top" Width="91" Height="60">
+                <Button x:Name="buttonReject" Command="{Binding RejectClick}" HorizontalAlignment="Left" Margin="242,124,0,0" VerticalAlignment="Top" Width="91" Height="60">
                     <TextBlock TextAlignment="Center" TextWrapping="Wrap"><Run Text="Отклонить заявку"/></TextBlock>
                 </Button>
-                <ListView ItemsSource="{Binding CurentApplies}" DisplayMemberPath="Id" HorizontalAlignment="Left" Height="212" Margin="10,31,0,0" VerticalAlignment="Top" Width="214">
-
-                </ListView>
-                <Button  Command="{Binding RefreshClick}" Content="Обновить заявки" HorizontalAlignment="Left" Margin="229,10,0,0" VerticalAlignment="Top" Width="104" Height="20"/>
+                <TextBlock HorizontalAlignment="Left" Margin="71,60,0,0" TextWrapping="Wrap" TextAlignment="Right" Text="ID заявки:" VerticalAlignment="Top"/>
+                <TextBlock HorizontalAlignment="Left" Margin="52,90,0,0" TextWrapping="Wrap" TextAlignment="Right" Text="Отправитель:" VerticalAlignment="Top"/>
+                <TextBlock HorizontalAlignment="Left" Margin="10,122,0,0" TextWrapping="Wrap" TextAlignment="Right" Text="Мероприятие:" VerticalAlignment="Top" Width="116"/>
+                <TextBlock HorizontalAlignment="Left" Margin="10,152,0,0" TextWrapping="Wrap" TextAlignment="Right" Text="Продолжительность выступления (мин):" VerticalAlignment="Top" Width="116"/>
+                <TextBox HorizontalAlignment="Left" Height="23" Margin="131,58,0,0" TextWrapping="Wrap" Text="{Binding Path=CurentApply.Id}" VerticalAlignment="Top" Width="93"/>
+                <TextBox HorizontalAlignment="Left" Height="23" Margin="131,88,0,0" TextWrapping="Wrap" Text="{Binding Path=CurentApply.Member.Name}" VerticalAlignment="Top" Width="93"/>
+                <TextBox HorizontalAlignment="Left" Height="23" Margin="131,118,0,0" TextWrapping="Wrap" Text="{Binding Path=CurentApply.OE.Name}" VerticalAlignment="Top" Width="93"/>
+                <TextBox HorizontalAlignment="Left" Height="23" Margin="131,158,0,0" TextWrapping="Wrap" Text="{Binding Path=CurentApply.Duration}" VerticalAlignment="Top" Width="93"/>
+                <TextBlock x:Name="textBlock1" HorizontalAlignment="Left" Margin="35,206,0,0" TextWrapping="Wrap" Text="{Binding Path=Message, UpdateSourceTrigger=PropertyChanged}" VerticalAlignment="Top"/>
 
             </Grid>
         </GroupBox>

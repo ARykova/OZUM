@@ -63,6 +63,15 @@ namespace DataAccessLayer
             _context.ScheduleParts.Add(s);
         }
 
+        public void ChangeSchedule(SchedulePart s, bool check)
+        {
+            if (check) _context.ScheduleParts.Find(s.Id).IsChecked = check;
+            else
+            {
+                _context.ScheduleParts.Remove(_context.ScheduleParts.Find(s.Id));
+            }
+        }        
+
         public void Save()
         {
             _context.SaveChanges();

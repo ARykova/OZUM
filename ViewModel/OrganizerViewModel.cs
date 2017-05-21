@@ -15,8 +15,11 @@ namespace ViewModel
         //public List<SchedulePart> 
         public List<SchedulePart> CurentApplies { get; set; }
         public SchedulePart CurentApply { get; set; }
+        public SQLRepository rep = new SQLRepository();
+        private string Message { get; set; }
         public OrganizerViewModel()
-        {        
+        {
+            //CurentApply = new SchedulePart();
             
         }       
 
@@ -27,8 +30,33 @@ namespace ViewModel
         }
         private void OnNewEventClick()
         {
+            
             NewEventViewModel neViewModel = new NewEventViewModel();
             ViewModelManager.Instance.ViewModelShow(neViewModel);
+        }
+
+        private RelayCommand _acceptClick;
+        public RelayCommand AcceptClick
+        {
+            get { return _acceptClick ?? (_acceptClick = new RelayCommand(OnAcceptClick)); }
+        }
+        private void OnAcceptClick()
+        {         
+            Message = "Заявка одобрена!";
+            CurentApply.IsChecked = true;
+            rep.ChangeSchedule(CurentApply, true);
+            rep.Save();
+        }
+
+        private RelayCommand _rejectClick;
+        public RelayCommand RejectClick
+        {
+            get { return _rejectClick ?? (_rejectClick = new RelayCommand(OnRejectClick)); }
+        }
+        private void OnRejectClick()
+        {
+            rep.ChangeSchedule(CurentApply, false);
+            rep.Save();            
         }
 
         private RelayCommand _changeScheduleClick;

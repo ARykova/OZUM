@@ -22,6 +22,7 @@ namespace OZUM
         public OrganizerView()
         {
             InitializeComponent();
-        }     
+        }
+        
     }
 }
