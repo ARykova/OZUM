@@ -46,7 +46,7 @@ namespace OZUM
         private static readonly Dictionary<Type, Type> Mapping =
             new Dictionary<Type, Type>
                 {
-                    {typeof(ChildViewModel), typeof(ChildView)},
+                    {typeof(RegistrationViewModel), typeof(RegistrationView)},
                     {typeof(MainWindowViewModel), typeof(MainWindow)},
                 };
 

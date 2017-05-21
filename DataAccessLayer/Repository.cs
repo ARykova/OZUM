@@ -25,13 +25,13 @@ namespace DataAccessLayer
 
         public List<Group> GetGroups()
         {
-            List<Organizer> Groups = new List<Organizer>();
-            Groups.Add(new Organizer
+            List<Group> Groups = new List<Group>();
+            Groups.Add(new Group
             {
                 Login = "123621",
                 Password = "123621",
                 Name = "Анечка",
-                Telephone = "88005553535",
+                Telephone = "8812848248",
                 Mail = "anna@milo.ru"
             });
             return Groups;
