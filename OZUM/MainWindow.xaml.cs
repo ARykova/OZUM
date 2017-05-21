@@ -12,24 +12,21 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using ViewModel;
+using GalaSoft.MvvmLight.Messaging;
 
 namespace OZUM
 {
     /// <summary>
     /// Interaction logic for MainWindow.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class MainWindow : ViewBase
     {
         public MainWindow()
         {
             InitializeComponent();
         }
 
-        private void Button_Click(object sender, RoutedEventArgs e)
-        {
-            var regWindow = new RegistrationView();
-            regWindow.Show();
-        }
 
         private void buttonLogIn_Click(object sender, RoutedEventArgs e)
         {

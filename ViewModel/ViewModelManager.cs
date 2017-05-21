@@ -57,6 +57,5 @@ namespace ViewModel
             ViewModelCloseDelegate handler = ViewModelCloseEvent;
             if (handler != null) handler(viewmodel);
         }
-
     }
 }

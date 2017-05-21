@@ -1,4 +1,4 @@
-﻿<Window x:Name="AuthorizationView" x:Class="OZUM.MainWindow"
+﻿<local:ViewBase x:Name="AuthorizationView" x:Class="OZUM.MainWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
@@ -13,6 +13,6 @@
         <TextBox HorizontalAlignment="Left" Height="20" Margin="220,69,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
         <TextBox HorizontalAlignment="Left" Height="20" Margin="220,99,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
         <Button x:Name="buttonLogIn" Content="Вход" HorizontalAlignment="Left" Height="25" Margin="175,129,0,0" VerticalAlignment="Top" Width="165" Click="buttonLogIn_Click"/>
-        <Button Content="Регистрация" HorizontalAlignment="Left" Margin="175,159,0,0" VerticalAlignment="Top" Width="165" Height="25" Click="Button_Click"/>
+        <Button Command="{Binding RegistrationClick}"  Content="Регистрация" HorizontalAlignment="Left" Margin="175,159,0,0" VerticalAlignment="Top" Width="165" Height="25"/>
     </Grid>
-</Window>
+</local:ViewBase>

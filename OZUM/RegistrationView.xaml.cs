@@ -11,23 +11,23 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using ViewModel;
+using GalaSoft.MvvmLight.Messaging;
 
 namespace OZUM
 {
     /// <summary>
     /// Interaction logic for RegistrationView.xaml
     /// </summary>
-    public partial class RegistrationView : Window
+    public partial class RegistrationView : ViewBase
     {
         public RegistrationView()
         {
             InitializeComponent();
+            
+            
         }
 
-        private void Button_Click(object sender, RoutedEventArgs e)
-        {
-
-        }
 
         private void textBoxLogin_KeyUp(object sender, KeyEventArgs e)
         {

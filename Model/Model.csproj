@@ -40,10 +40,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Group.cs" />
-    <Compile Include="ILoginable.cs" />
+    <Compile Include="User.cs" />
     <Compile Include="OrganizeEvent.cs" />
-    <Compile Include="Organizer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Schedule.cs" />
   </ItemGroup>
