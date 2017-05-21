@@ -17,6 +17,8 @@ namespace ViewModel
 
 
         //Кнопки
+        
+
         private RelayCommand _fillAppClick;
         public RelayCommand FillAppClick
         {

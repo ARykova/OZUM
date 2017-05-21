@@ -25,7 +25,7 @@
         <GroupBox Header="Заявки" HorizontalAlignment="Left" Height="265" Margin="380,25,0,0" VerticalAlignment="Top" Width="355">
             <Grid>
                 <TextBlock HorizontalAlignment="Left" Margin="10,10,0,0" TextWrapping="Wrap" Text="Необработанные заявки:" VerticalAlignment="Top"/>
-                <ComboBox ItemsSource="{Binding CurentOrg.AllApplies}" DisplayMemberPath="Id" HorizontalAlignment="Left" Margin="153,8,0,0" VerticalAlignment="Top" Width="71"/>
+                <ComboBox ItemsSource="{Binding CurentApplies}" DisplayMemberPath="Id" HorizontalAlignment="Left" Margin="153,8,0,0" VerticalAlignment="Top" Width="71"/>
                 <Button x:Name="buttonAccept" HorizontalAlignment="Left" Margin="242,54,0,0" VerticalAlignment="Top" Width="91" Height="60">
                     <TextBlock TextAlignment="Center" TextWrapping="Wrap">Одобрить заявку</TextBlock>
                 </Button>
@@ -33,8 +33,9 @@
                     <TextBlock TextAlignment="Center" TextWrapping="Wrap"><Run Text="Отклонить заявку"/></TextBlock>
                 </Button>
                 <ListView ItemsSource="{Binding CurentApplies}" DisplayMemberPath="Id" HorizontalAlignment="Left" Height="212" Margin="10,31,0,0" VerticalAlignment="Top" Width="214">
-                   
+
                 </ListView>
+                <Button  Command="{Binding RefreshClick}" Content="Обновить заявки" HorizontalAlignment="Left" Margin="229,10,0,0" VerticalAlignment="Top" Width="104" Height="20"/>
 
             </Grid>
         </GroupBox>

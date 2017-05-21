@@ -12,28 +12,25 @@ namespace ViewModel
     public class OrganizerViewModel : ViewModelBase
     {
         public Organizer CurentOrg { get; set; }
-        public List<Group> GroupsOrg { get; set; }
-        //List<SchedulePart> CurentApplies { get; set; }
+        //public List<SchedulePart> 
+        public List<SchedulePart> CurentApplies { get; set; }
 
         public OrganizerViewModel()
         {
-
+            
+            
         }
 
 
-        List<SchedulePart> CurentApplies
-        { get
-            {
-                foreach (Group gr in GroupsOrg)
-                {
-                    foreach (SchedulePart sp in gr.Applies)
-                    {
-                        if (!sp.IsChecked && sp.OE.EventsOrganizer == CurentOrg) CurentApplies.Add(sp);
-                    }
-                }
-                return CurentApplies;
-            }
-        }       
+        private RelayCommand _refreshClick;
+        public RelayCommand RefreshClick
+        {
+            get { return _refreshClick ?? (_refreshClick = new RelayCommand(OnRefreshClick)); }
+        }
+        private void OnRefreshClick()
+        {
+            
+        }
 
         private RelayCommand _newEventClick;
         public RelayCommand NewEventClick

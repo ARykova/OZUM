@@ -13,7 +13,7 @@ namespace ViewModel
     {
         public List<Organizer> Organizers = new List<Organizer>();
         public List<Group> Groups = new List<Group>();
-
+        public List<SchedulePart> tmpScheduleParts = new List<SchedulePart>();
         public MainWindowViewModel()
         {            
             var rep = new SQLRepository();
@@ -33,7 +33,7 @@ namespace ViewModel
             Organizers = rep.GetOrganizers();
             Groups = rep.GetGroups();
             List<OrganizeEvent> tmpEvents = rep.GetEvents();
-            List<SchedulePart> tmpScheduleParts = rep.GetScheduleParts();
+            tmpScheduleParts = rep.GetScheduleParts();
 
             //foreach (Organizer o in Organizers)
             //{
@@ -86,9 +86,21 @@ namespace ViewModel
             }
             foreach (Organizer obj in Organizers)
             {
+                List<SchedulePart> tmpScheduleParts2 = new List<SchedulePart>();
+
                 if (obj.Login == LoginField)
                 {
-                    OrganizerViewModel orgViewModel = new OrganizerViewModel() { CurentOrg = obj, GroupsOrg = Groups };
+                    for (int i = 0; i < obj.AllIvents.Count; i++)
+                    {
+                        foreach (SchedulePart sp in obj.AllIvents[i].Schedule)
+                        {
+                            if (!sp.IsChecked)
+                            {
+                                tmpScheduleParts2.Add(sp);
+                            }
+                        }
+                    }
+                    OrganizerViewModel orgViewModel = new OrganizerViewModel() { CurentOrg = obj, CurentApplies = tmpScheduleParts2 };
                     ViewModelManager.Instance.ViewModelShow(orgViewModel);
                 }
             }
