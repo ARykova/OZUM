@@ -22,18 +22,6 @@ namespace OZUM
         public OrganizerView()
         {
             InitializeComponent();
-        }
-
-        private void buttonNewEvent_Click(object sender, RoutedEventArgs e)
-        {
-            var neWindow = new NewEventView();
-            neWindow.Show();
-        }
-
-        private void buttonChangeSchedule_Click(object sender, RoutedEventArgs e)
-        {
-            var csWindow = new ChangeScheduleView();
-            csWindow.Show();
-        }
+        }     
     }
 }

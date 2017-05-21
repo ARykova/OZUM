@@ -23,5 +23,20 @@ namespace OZUM
         {
             InitializeComponent();
         }
+
+        private void comboBoxEvent_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            buttonSendApplication.IsEnabled = comboBoxEvent.Text != "" && textBoxDuration.Text != "";
+        }
+
+        private void textBoxDuration_KeyUp(object sender, KeyEventArgs e)
+        {
+            buttonSendApplication.IsEnabled = comboBoxEvent.Text != "" && textBoxDuration.Text != "";
+        }
+
+        private void buttonCancelFillApplication_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }

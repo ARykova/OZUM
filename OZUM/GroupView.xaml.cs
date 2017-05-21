@@ -23,12 +23,6 @@ namespace OZUM
         public GroupView()
         {
             InitializeComponent();
-        }
-
-        private void buttonFillApplication_Click(object sender, RoutedEventArgs e)
-        {
-            var faWindow = new FillApplicationView();
-            faWindow.Show();
-        }
+        }        
     }
 }

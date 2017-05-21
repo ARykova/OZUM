@@ -8,7 +8,7 @@
         Title="Личный кабинет участника" Height="316" Width="568">
     <Grid>
         <Label Content="Вы вошли, как " HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,0,0,0"/>
-        <Button x:Name="buttonFillApplication" Content="Подать заявку" HorizontalAlignment="Left" Margin="446,72,0,0" VerticalAlignment="Top" Width="100" Height="40" Click="buttonFillApplication_Click"/>
+        <Button Command="{Binding FillAppClick}" x:Name="buttonFillApplication" Content="Подать заявку" HorizontalAlignment="Left" Margin="446,72,0,0" VerticalAlignment="Top" Width="100" Height="40"/>
         <Button HorizontalAlignment="Left" Margin="446,117,0,0" VerticalAlignment="Top" Width="100" Height="40">
             <TextBlock x:Name="buttonChangeProfile" Text="Редактировать профиль"
                        TextWrapping="Wrap"
@@ -24,7 +24,7 @@
             <TextBlock>Предстоящие</TextBlock>
             <TextBlock>Прошедшие</TextBlock>
         </ComboBox>
-        <Button x:Name="buttonShowEventDetails" Content="Подробнее..." HorizontalAlignment="Left" Margin="30,248,0,0" VerticalAlignment="Top" Width="195"/>
+        <Button x:Name="buttonShowEventDetails" Command="{Binding ShowEventDetailsClick}" Content="Подробнее..." HorizontalAlignment="Left" Margin="30,248,0,0" VerticalAlignment="Top" Width="195"/>
 
     </Grid>
 </local:ViewBase>

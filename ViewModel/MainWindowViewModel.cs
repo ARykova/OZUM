@@ -29,19 +29,11 @@ namespace ViewModel
         }
         private void OnRegistrationClick()
         {
-            //List<IUser> allUsers = new List<IUser>();
-            //foreach(Organizer org in Organizers)
-            //{
-            //    allUsers.Add(org);
-            //}
-            //foreach (Group group in Groups)
-            //{
-            //    allUsers.Add(group);
-            //}
-
             RegistrationViewModel registrationViewModel = new RegistrationViewModel() { GroupReg = Groups, OrgReg = Organizers};
             ViewModelManager.Instance.ViewModelShow(registrationViewModel);
         }
+
+        public string LoginField { get; set; }
 
         private RelayCommand _loginClick;
         public RelayCommand LoginClick
@@ -50,8 +42,22 @@ namespace ViewModel
         }
         private void OnLoginClick()
         {
-            OrganizerViewModel orgViewModel = new OrganizerViewModel();
-            ViewModelManager.Instance.ViewModelShow(orgViewModel);
+            foreach (Group obj in Groups)
+            {
+                if (obj.Login == LoginField)
+                {
+                    GroupViewModel grViewModel = new GroupViewModel();
+                    ViewModelManager.Instance.ViewModelShow(grViewModel);
+                }
+            }
+            foreach (Organizer obj in Organizers)
+            {
+                if (obj.Login == LoginField)
+                {
+                    OrganizerViewModel orgViewModel = new OrganizerViewModel();
+                    ViewModelManager.Instance.ViewModelShow(orgViewModel);
+                }
+            }
         }
     }
 }

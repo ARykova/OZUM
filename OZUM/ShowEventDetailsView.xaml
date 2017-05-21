@@ -8,7 +8,7 @@
         Title="Описание мероприятия" Height="300" Width="234">
     <Grid>
         <TextBox HorizontalAlignment="Left" Height="220" Margin="10,10,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="203"/>
-        <Button Content="Ок" HorizontalAlignment="Left" Margin="75,235,0,0" VerticalAlignment="Top" Width="75" Height="24"/>
+        <Button Content="Ок" Command="{Binding OkClick}" HorizontalAlignment="Left" Margin="75,235,0,0" VerticalAlignment="Top" Width="75" Height="24"/>
 
     </Grid>
 </local:ViewBase>

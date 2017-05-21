@@ -17,7 +17,7 @@
         </DatePicker>
         <DatePicker x:Name="datePickerEnd" HorizontalAlignment="Left" Margin="79,60,0,0" VerticalAlignment="Top" Width="129" MouseDown="datePickerEnd_MouseDown" SelectedDateChanged="datePickerEnd_SelectedDateChanged"/>
         <Button x:Name="buttonAddEvent" Content="Добавить" HorizontalAlignment="Left" Margin="132,218,0,0" VerticalAlignment="Top" Width="124" RenderTransformOrigin="0.587,0.3" Height="28" IsEnabled="False"/>
-        <Button Content="Отменить" HorizontalAlignment="Left" Margin="19,218,0,0" VerticalAlignment="Top" Width="86" Height="28"/>
+        <Button Content="Отменить" Command="{Binding CancelClick}" HorizontalAlignment="Left" Margin="19,218,0,0" VerticalAlignment="Top" Width="86" Height="28"/>
         <TextBox HorizontalAlignment="Left" Height="20" Margin="213,34,0,0" TextWrapping="Wrap" Text="00:00" VerticalAlignment="Top" Width="43"/>
         <TextBox HorizontalAlignment="Left" Height="20" Margin="213,61,0,0" TextWrapping="Wrap" Text="00:00" VerticalAlignment="Top" Width="43"/>
 

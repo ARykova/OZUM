@@ -14,7 +14,7 @@
                 <TransformGroup>
                     <ScaleTransform/>
                     <SkewTransform/>
-                    <RotateTransform Angle="-180.299"/>
+                    <RotateTransform Angle="-180"/>
                     <TranslateTransform/>
                 </TransformGroup>
             </Button.RenderTransform>
@@ -22,7 +22,7 @@
         <Button x:Name="buttonDown" Content="V" HorizontalAlignment="Left" Margin="217,75,0,0" VerticalAlignment="Top" Width="27" FontSize="16" FontWeight="Bold"/>
         <Button x:Name="buttonDel" Content="-" HorizontalAlignment="Left" Margin="217,110,0,0" VerticalAlignment="Top" Width="27" RenderTransformOrigin="0.593,0.3" FontSize="16" FontWeight="Bold"/>
         <Button x:Name="buttonSaveSchedule" Content="Сохранить" HorizontalAlignment="Left" Margin="101,198,0,0" VerticalAlignment="Top" Width="109" Height="29"/>
-        <Button Content="Отменить" HorizontalAlignment="Left" Margin="10,198,0,0" VerticalAlignment="Top" Width="75" Height="29"/>
+        <Button x:Name="buttonCancelChangeSchedule" Content="Отменить" Command="{Binding CancelClick}" HorizontalAlignment="Left" Margin="10,198,0,0" VerticalAlignment="Top" Width="75" Height="29"/>
 
     </Grid>
 </local:ViewBase>

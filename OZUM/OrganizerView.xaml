@@ -17,13 +17,13 @@
 
                 </ComboBox>
                 <ListBox HorizontalAlignment="Left" Height="188" Margin="10,41,0,0" VerticalAlignment="Top" Width="214"/>
-                <Button x:Name="buttonNewEvent" HorizontalAlignment="Left" Margin="239,19,0,0" VerticalAlignment="Top" Width="91" Height="60" Click="buttonNewEvent_Click">
+                <Button x:Name="buttonNewEvent" Command="{Binding NewEventClick}" HorizontalAlignment="Left" Margin="239,19,0,0" VerticalAlignment="Top" Width="91" Height="60">
                     <TextBlock Height="56" Width="81" TextWrapping="Wrap" TextAlignment="Center">Добавить новое мероприятие</TextBlock>
                 </Button>
-                <Button x:Name="buttonChangeSchedule" HorizontalAlignment="Left" Margin="239,89,0,0" VerticalAlignment="Top" Width="91" Height="60" Click="buttonChangeSchedule_Click">
+                <Button x:Name="buttonChangeSchedule" Command="{Binding ChangeScheduleClick}" HorizontalAlignment="Left" Margin="239,89,0,0" VerticalAlignment="Top" Width="91" Height="60">
                     <TextBlock Height="35" Width="70" TextWrapping="Wrap" TextAlignment="Center">Изменить расписание</TextBlock>
                 </Button>
-                <Button x:Name="buttonShowEventDetails" Content="Подробнее..." HorizontalAlignment="Left" Margin="239,159,0,0" VerticalAlignment="Top" Width="91" Height="60"/>
+                <Button x:Name="buttonShowEventDetails" Command="{Binding ShowEventDetailsClick}" Content="Подробнее..." HorizontalAlignment="Left" Margin="239,159,0,0" VerticalAlignment="Top" Width="91" Height="60"/>
             </Grid>
         </GroupBox>
         <GroupBox Header="Заявки" HorizontalAlignment="Left" Height="265" Margin="380,25,0,0" VerticalAlignment="Top" Width="355">
@@ -41,6 +41,6 @@
             </Grid>
         </GroupBox>
         <TextBlock HorizontalAlignment="Left" Margin="10,0,0,0" TextWrapping="Wrap" Text="Вы вошли, как" VerticalAlignment="Top"/>
-        <Button x:Name="buttonLogOut" Content="Выйти" HorizontalAlignment="Left" Margin="630,295,0,0" VerticalAlignment="Top" Width="91" Height="25"/>
+        <Button x:Name="buttonLogOut" Command="{Binding LogOutClick}" Content="Выйти" HorizontalAlignment="Left" Margin="630,295,0,0" VerticalAlignment="Top" Width="91" Height="25"/>
     </Grid>
 </local:ViewBase>

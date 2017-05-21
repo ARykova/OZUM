@@ -26,15 +26,8 @@ namespace OZUM
 
         private void textBoxEventName_KeyUp(object sender, KeyEventArgs e)
         {
-            if (textBoxEventName.Text != "" && datePickerEnd.SelectedDate >= datePickerStart.SelectedDate &&
-                datePickerStart.SelectedDate >= DateTime.Now)
-            {
-                buttonAddEvent.IsEnabled = true;
-            }
-            else
-            {
-                buttonAddEvent.IsEnabled = false;
-            }
+            buttonAddEvent.IsEnabled = textBoxEventName.Text != "" && datePickerEnd.SelectedDate >= datePickerStart.SelectedDate &&
+            datePickerStart.SelectedDate >= DateTime.Now;
         }
 
         private void datePickerStart_MouseDown(object sender, MouseButtonEventArgs e)
@@ -49,28 +42,14 @@ namespace OZUM
 
         private void datePickerStart_SelectedDateChanged(object sender, SelectionChangedEventArgs e)
         {
-            if (textBoxEventName.Text != "" && datePickerEnd.SelectedDate >= datePickerStart.SelectedDate &&
-                datePickerStart.SelectedDate >= DateTime.Now)
-            {
-                buttonAddEvent.IsEnabled = true;
-            }
-            else
-            {
-                buttonAddEvent.IsEnabled = false;
-            }
+            buttonAddEvent.IsEnabled = textBoxEventName.Text != "" && datePickerEnd.SelectedDate >= datePickerStart.SelectedDate &&
+            datePickerStart.SelectedDate >= DateTime.Now;
         }
 
         private void datePickerEnd_SelectedDateChanged(object sender, SelectionChangedEventArgs e)
         {
-            if (textBoxEventName.Text != "" && datePickerEnd.SelectedDate >= datePickerStart.SelectedDate &&
-               datePickerStart.SelectedDate >= DateTime.Now)
-            {
-                buttonAddEvent.IsEnabled = true;
-            }
-            else
-            {
-                buttonAddEvent.IsEnabled = false;
-            }
+            buttonAddEvent.IsEnabled = textBoxEventName.Text != "" && datePickerEnd.SelectedDate >= datePickerStart.SelectedDate &&
+            datePickerStart.SelectedDate >= DateTime.Now;
         }
     }
 }

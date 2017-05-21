@@ -6,24 +6,19 @@
         xmlns:local="clr-namespace:OZUM"
         mc:Ignorable="d"
         Title="Заполнение заявки" Height="355.335" Width="371.82">
-
-    <local:ViewBase.BindingGroup>
-        <BindingGroup Name="bindingGroup">
-        </BindingGroup>
-    </local:ViewBase.BindingGroup>
     <Grid Margin="0,0,0,0">
         
         <Label Content="Выберите мероприятие:" HorizontalAlignment="Left" Margin="32,10,0,0" VerticalAlignment="Top"/>
-        <ComboBox x:Name="comboBoxEvent" HorizontalAlignment="Left" Margin="178,14,0,0" VerticalAlignment="Top" Width="150"/>
+        <ComboBox x:Name="comboBoxEvent" HorizontalAlignment="Left" Margin="178,14,0,0" VerticalAlignment="Top" Width="150" SelectionChanged="comboBoxEvent_SelectionChanged"/>
         <TextBox x:Name="textBoxEventInfo" HorizontalAlignment="Left" Height="111" Margin="178,47,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="150" IsReadOnlyCaretVisible="True"/>
         <Label HorizontalAlignment="Left" Margin="10,163,0,0" VerticalAlignment="Top">
             <TextBlock x:Name ="Label" Text ="Продолжительность Вашего выступления (мин):" TextWrapping="Wrap" TextAlignment="Right" Height="46" Width="151"/>
         </Label>
-        <TextBox x:Name="textBoxDuration" HorizontalAlignment="Left" Height="23" Margin="178,175,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="150"/>
+        <TextBox x:Name="textBoxDuration" HorizontalAlignment="Left" Height="23" Margin="178,175,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="150" KeyUp="textBoxDuration_KeyUp"/>
         <TextBlock HorizontalAlignment="Left" Margin="27,219,0,0" TextAlignment="Center" TextWrapping="Wrap" Text="Данные Вашего профиля будут доступны организатору мероприятия." VerticalAlignment="Top" Height="33" Width="301"/>
         <TextBlock HorizontalAlignment="Left" Margin="27,47,0,0" TextWrapping="Wrap" TextAlignment="Right" Text="Информация о мероприятии:" VerticalAlignment="Top" Width="144"/>
-        <Button x:Name="buttonSendApplication" Content="Отправить заявку" HorizontalAlignment="Left" Margin="178,271,0,0" VerticalAlignment="Top" Width="150" Height="34"/>
-        <Button x:Name="buttonCancelFillApplication" Content="Отменить" HorizontalAlignment="Left" Margin="32,271,0,0" VerticalAlignment="Top" Width="125" Height="34"/>
+        <Button x:Name="buttonSendApplication" Content="Отправить заявку" HorizontalAlignment="Left" Margin="178,271,0,0" VerticalAlignment="Top" Width="150" Height="34" IsEnabled="False"/>
+        <Button Command="{Binding CancelClick}" x:Name="buttonCancelFillApplication" Content="Отменить" HorizontalAlignment="Left" Margin="32,271,0,0" VerticalAlignment="Top" Width="125" Height="34"/>
     </Grid>
 </local:ViewBase>
 
