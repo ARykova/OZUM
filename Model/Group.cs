@@ -15,7 +15,7 @@ namespace Model
         public string Information { get; set; }
         public string Telephone { get; set; }
         public string Mail { get; set; }
-        public bool IsOrganizer { get; set; }
+        //public bool IsOrganizer { get; set; }
 
         public List<SchedulePart> Applies { get; set; }
         //public List<OrganizeEvent> UpgoingEvents { get; set; }

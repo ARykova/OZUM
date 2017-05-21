@@ -32,14 +32,18 @@ namespace ViewModel
 
             Organizers = rep.GetOrganizers();
             Groups = rep.GetGroups();
+            List<OrganizeEvent> tmpEvents = rep.GetEvents();
 
-            foreach (Organizer o in Organizers)
-            {
-                foreach(OrganizeEvent oe in rep.GetEvents())
-                {
-                    if (oe.EventsOrganizer.Id == o.Id) o.AllIvents.Add(oe);
-                }
-            }
+            //foreach (Organizer o in Organizers)
+            //{
+            //    foreach (OrganizeEvent oe in tmpEvents)
+            //    {
+            //        if (oe.EventsOrganizer == o)
+            //        {
+            //            o.AllIvents.Add(oe);
+            //        }
+            //    }
+            //}
 
             //foreach (Group g in Groups)
             //{
@@ -83,7 +87,7 @@ namespace ViewModel
             {
                 if (obj.Login == LoginField)
                 {
-                    OrganizerViewModel orgViewModel = new OrganizerViewModel() { CurentOrg = obj, CurentOrgEvents = obj.AllIvents };
+                    OrganizerViewModel orgViewModel = new OrganizerViewModel() { CurentOrg = obj};
                     ViewModelManager.Instance.ViewModelShow(orgViewModel);
                 }
             }

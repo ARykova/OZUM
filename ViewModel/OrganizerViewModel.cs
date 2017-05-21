@@ -16,7 +16,7 @@ namespace ViewModel
         }
 
         public Organizer CurentOrg { get; set; }
-        public List<OrganizeEvent> CurentOrgEvents { get; set;}        
+        //public List<OrganizeEvent> CurentOrgEvents = new List<OrganizeEvent>;       
 
         private RelayCommand _newEventClick;
         public RelayCommand NewEventClick

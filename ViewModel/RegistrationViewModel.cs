@@ -78,7 +78,7 @@ namespace ViewModel
                     Telephone = RegTelephone,
                     Mail = RegMail,
                     Information = RegInformation,
-                    IsOrganizer = false
+                    //IsOrganizer = false
 
                 });
             }

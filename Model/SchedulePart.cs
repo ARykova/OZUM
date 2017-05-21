@@ -12,7 +12,7 @@ namespace Model
 
         public virtual OrganizeEvent OE { get; set; }
         public Group Member { get; set; }
-        public DateTime Duration { get; set; }
+        public TimeSpan Duration { get; set; }
         public bool IsChecked { get; set; }
     }
 }
