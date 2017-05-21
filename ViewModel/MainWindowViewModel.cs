@@ -11,18 +11,14 @@ namespace ViewModel
 {
     public class MainWindowViewModel: ViewModelBase
     {
-        public List<User> Users = new List<User>();
-        
+        public List<Organizer> Organizers = new List<Organizer>();
+        public List<Group> Groups = new List<Group>();
 
         public MainWindowViewModel()
         {            
             var rep = new Repository();
-            Users = rep.GetUsers();
-        }
-
-        private void Instance_AddUser(User usr)
-        {
-            Users.Add(usr);
+            Organizers = rep.GetOrganizers();
+            Groups = rep.GetGroups();
         }
 
 
@@ -33,8 +29,17 @@ namespace ViewModel
         }
         private void OnRegistrationClick()
         {
-            
-            RegistrationViewModel registrationViewModel = new RegistrationViewModel() { UsersReg = Users};
+            //List<IUser> allUsers = new List<IUser>();
+            //foreach(Organizer org in Organizers)
+            //{
+            //    allUsers.Add(org);
+            //}
+            //foreach (Group group in Groups)
+            //{
+            //    allUsers.Add(group);
+            //}
+
+            RegistrationViewModel registrationViewModel = new RegistrationViewModel() { GroupReg = Groups, OrgReg = Organizers};
             ViewModelManager.Instance.ViewModelShow(registrationViewModel);
         }
 

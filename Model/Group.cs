@@ -6,18 +6,17 @@ using System.Threading.Tasks;
 
 namespace Model
 {
-    public class OrganizeEvent
+    public class Group : IUser
     {
         public int Id { get; set; }
-
+        public string Login { get; set; }
+        public string Password { get; set; }
         public string Name { get; set; }
-        public Organizer EventsOrganizer { get; set; }
         public string Information { get; set; }
-        Schedule Schedule { get; set; }
+        public string Telephone { get; set; }
+        public string Mail { get; set; }
+        public bool IsOrganizer { get; set; }
 
-        public DateTime Start { get; set; }
-        public DateTime Finish { get; set; }
 
-        List<Group> OnRegistration;
     }
 }

@@ -9,19 +9,19 @@
     <Grid Margin="5,5,5,5">
         <Label Content="*Вы: " HorizontalAlignment="Left" Margin="122,74,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.548,0.423"/>
         <RadioButton x:Name="radioButtonGroup" Content="Участник" HorizontalAlignment="Left" Margin="158,80,0,0" VerticalAlignment="Top" Checked="radioButtonGroup_Checked"/>
-        <RadioButton IsChecked="{Binding Path=RVMU.IsOrganizer}" x:Name="radioButtonOrganizer" Content="Организатор" HorizontalAlignment="Left" Margin="158,98,0,0" VerticalAlignment="Top" Checked="radioButtonOrganizer_Checked"/>
+        <RadioButton IsChecked="{Binding Path=IsOrganizer}" x:Name="radioButtonOrganizer" Content="Организатор" HorizontalAlignment="Left" Margin="158,98,0,0" VerticalAlignment="Top" Checked="radioButtonOrganizer_Checked"/>
         <Label Content="*Логин:" HorizontalAlignment="Left" Margin="104,24,0,0" VerticalAlignment="Top"/>
         <Label Content="*Пароль:" HorizontalAlignment="Left" Margin="96,50,0,0" VerticalAlignment="Top"/>
-        <TextBox Text="{Binding Path=RVMU.Login}" x:Name="textBoxLogin" HorizontalAlignment="Left" Height="20" Margin="160,28,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="150" KeyUp="textBoxLogin_KeyUp"/>
-        <TextBox Text="{Binding Path=RVMU.Password}" x:Name="textBoxPassword" HorizontalAlignment="Left" Height="20" Margin="160,52,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="150" KeyUp="textBoxPassword_KeyUp"/>
+        <TextBox Text="{Binding Path=RegLogin}" x:Name="textBoxLogin" HorizontalAlignment="Left" Height="20" Margin="160,28,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="150" KeyUp="textBoxLogin_KeyUp"/>
+        <TextBox Text="{Binding Path=RegPassword}" x:Name="textBoxPassword" HorizontalAlignment="Left" Height="20" Margin="160,52,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="150" KeyUp="textBoxPassword_KeyUp"/>
         <Label Content="*Имя (Название группы):" HorizontalAlignment="Left" Margin="8,112,0,0" VerticalAlignment="Top"/>
-        <TextBox Text="{Binding Path=RVMU.Name}" x:Name="textBoxName" HorizontalAlignment="Left" Height="20" Margin="160,118,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="150" KeyUp="textBoxName_KeyUp"/>
+        <TextBox Text="{Binding Path=RegName}" x:Name="textBoxName" HorizontalAlignment="Left" Height="20" Margin="160,118,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="150" KeyUp="textBoxName_KeyUp"/>
         <Label Content="*Email:" HorizontalAlignment="Left" Margin="108,138,0,0" VerticalAlignment="Top"/>
-        <TextBox Text="{Binding Path=RVMU.Mail}" x:Name="textBoxEmail" HorizontalAlignment="Left" Height="20" Margin="160,142,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="150" KeyUp="textBoxEmail_KeyUp"/>
+        <TextBox Text="{Binding Path=RegMail}" x:Name="textBoxEmail" HorizontalAlignment="Left" Height="20" Margin="160,142,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="150" KeyUp="textBoxEmail_KeyUp"/>
         <Label Content="*Телефон:" HorizontalAlignment="Left" Margin="90,164,0,0" VerticalAlignment="Top"/>
-        <TextBox Text="{Binding Path=RVMU.Telephone}" x:Name="textBoxPhone" HorizontalAlignment="Left" Height="20" Margin="160,168,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="150" KeyUp="textBoxPhone_KeyUp"/>
+        <TextBox Text="{Binding Path=RegTelephone}" x:Name="textBoxPhone" HorizontalAlignment="Left" Height="20" Margin="160,168,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="150" KeyUp="textBoxPhone_KeyUp"/>
         <Label Content="Дополнительная" HorizontalAlignment="Left" Margin="52,196,0,0" VerticalAlignment="Top"/>
-        <TextBox Text="{Binding Path=RVMU.Information}" HorizontalAlignment="Left" Height="90" Margin="160,196,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="150"/>
+        <TextBox Text="{Binding Path=RegInformation}" HorizontalAlignment="Left" Height="90" Margin="160,196,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="150"/>
         <Button Content="Отменить" HorizontalAlignment="Left" Margin="66,304,0,0" VerticalAlignment="Top" Width="74"/>
         <Button Command="{Binding SaveClick}" x:Name="buttonReg" Content="Зарегистрировать" HorizontalAlignment="Left" Margin="158,304,0,0" VerticalAlignment="Top" Width="150" IsEnabled="False"/>
         <Label Content="Поля, отмеченные *, обязательны для заполнения" HorizontalAlignment="Left" Margin="24,2,0,0" VerticalAlignment="Top"/>
