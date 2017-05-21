@@ -5,8 +5,10 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:OZUM"
         mc:Ignorable="d"
-        Title="Описание мероприятия" Height="300" Width="300">
+        Title="Описание мероприятия" Height="300" Width="234">
     <Grid>
-        
+        <TextBox HorizontalAlignment="Left" Height="220" Margin="10,10,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="203"/>
+        <Button Content="Ок" HorizontalAlignment="Left" Margin="75,235,0,0" VerticalAlignment="Top" Width="75" Height="24"/>
+
     </Grid>
 </Window>
