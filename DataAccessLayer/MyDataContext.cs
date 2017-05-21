@@ -15,6 +15,6 @@ namespace DataAccessLayer
         public DbSet<Organizer> Organizers { get; set; }
         //public DbSet<Apply> Applies { get; set; }
         public DbSet<OrganizeEvent> OrganizeEvents { get; set; }
-        public DbSet<SchedulePart> Schedules { get; set; }
+        public DbSet<SchedulePart> ScheduleParts { get; set; }
     }
 }

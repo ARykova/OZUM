@@ -18,9 +18,41 @@ namespace ViewModel
         {            
             var rep = new SQLRepository();
 
+            //var group1 = new Group { Login = "1", Password = "1", Mail = " 123", Telephone = "12345", Name = "Dada", IsOrganizer = false };
+            //var org1 = new Organizer { Name = "Fedor", IsOrganizer = true, Telephone = "123", Mail = "123", Password = "123", Login = "123"};
+
+            //var event1 = new OrganizeEvent { Name = "event1", Start = DateTime.Parse("12.02.2017"), Finish = DateTime.Parse("12.04.2017"), EventsOrganizer = org1 };
+            //var event2 = new OrganizeEvent { Name = "event2", Start = DateTime.Parse("12.02.2017"), Finish = DateTime.Parse("12.04.2017"), EventsOrganizer = org1 };
+
+            //rep.AddGroup(group1);
+            //rep.AddOrganizer(org1);
+            //rep.AddOrganizeEvent(event1);
+            //rep.AddOrganizeEvent(event2);
+            //rep.Save();
+
             Organizers = rep.GetOrganizers();
             Groups = rep.GetGroups();
             List<OrganizeEvent> tmpEvents = rep.GetEvents();
+            List<SchedulePart> tmpScheduleParts = rep.GetScheduleParts();
+
+            //foreach (Organizer o in Organizers)
+            //{
+            //    foreach (OrganizeEvent oe in tmpEvents)
+            //    {
+            //        if (oe.EventsOrganizer == o)
+            //        {
+            //            o.AllIvents.Add(oe);
+            //        }
+            //    }
+            //}
+
+            //foreach (Group g in Groups)
+            //{
+            //    foreach (OrganizeEvent oe in rep.GetEvents())
+            //    {
+            //        if (oe.Schedule.Member.Id == g.Id) g.AllEvents.Add(oe);
+            //    }
+            //}
         }
 
 
@@ -48,7 +80,7 @@ namespace ViewModel
             {
                 if (obj.Login == LoginField)
                 {
-                    GroupViewModel grViewModel = new GroupViewModel() { CurrentGroup = obj};
+                    GroupViewModel grViewModel = new GroupViewModel();
                     ViewModelManager.Instance.ViewModelShow(grViewModel);
                 }
             }
@@ -56,7 +88,7 @@ namespace ViewModel
             {
                 if (obj.Login == LoginField)
                 {
-                    OrganizerViewModel orgViewModel = new OrganizerViewModel() { CurentOrg = obj};
+                    OrganizerViewModel orgViewModel = new OrganizerViewModel() { CurentOrg = obj, Groups = Groups };
                     ViewModelManager.Instance.ViewModelShow(orgViewModel);
                 }
             }

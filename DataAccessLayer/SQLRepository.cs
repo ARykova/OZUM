@@ -17,6 +17,7 @@ namespace DataAccessLayer
         {
             return _context.Groups.ToList();
         }
+
         public List<Organizer> GetOrganizers()
         {
             return _context.Organizers.ToList();
@@ -30,6 +31,11 @@ namespace DataAccessLayer
         public List<OrganizeEvent> GetEvents()
         {
             return _context.OrganizeEvents.ToList();
+        }
+
+        public List<SchedulePart> GetScheduleParts()
+        {
+            return _context.ScheduleParts.ToList();
         }
 
         //public void AddApply(Apply a)
@@ -54,7 +60,7 @@ namespace DataAccessLayer
 
         public void AddSchedule(SchedulePart s)
         {
-            _context.Schedules.Add(s);
+            _context.ScheduleParts.Add(s);
         }
 
         public void Save()

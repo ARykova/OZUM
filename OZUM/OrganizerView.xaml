@@ -17,22 +17,28 @@
                     <TextBlock Height="35" Width="70" TextWrapping="Wrap" TextAlignment="Center">Изменить расписание</TextBlock>
                 </Button>
                 <Button x:Name="buttonShowEventDetails" Command="{Binding ShowEventDetailsClick}" Content="Подробнее..." HorizontalAlignment="Left" Margin="239,159,0,0" VerticalAlignment="Top" Width="91" Height="60"/>
-                <ListView x:Name="listViewOrgEvents" ItemsSource="{Binding CurentGroup.Applies.OE}" DisplayMemberPath="Name" HorizontalAlignment="Left" Height="194" Margin="10,39,0,0" VerticalAlignment="Top" Width="214">
-                    
+                <ListView x:Name="listViewOrgEvents" ItemsSource="{Binding CurentOrg.AllIvents}" DisplayMemberPath="Name" HorizontalAlignment="Left" Height="194" Margin="10,39,0,0" VerticalAlignment="Top" Width="214">
+
                 </ListView>
             </Grid>
         </GroupBox>
         <GroupBox Header="Заявки" HorizontalAlignment="Left" Height="265" Margin="380,25,0,0" VerticalAlignment="Top" Width="355">
             <Grid>
                 <TextBlock HorizontalAlignment="Left" Margin="10,10,0,0" TextWrapping="Wrap" Text="Необработанные заявки:" VerticalAlignment="Top"/>
-                <ComboBox ItemsSource="{Binding CurentApplies}" HorizontalAlignment="Left" Margin="153,8,0,0" VerticalAlignment="Top" Width="71"/>
-                <TextBox HorizontalAlignment="Left" Height="188" Margin="10,41,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="214"/>
+                <ComboBox ItemsSource="{Binding CurentOrg.AllApplies}" DisplayMemberPath="Id" HorizontalAlignment="Left" Margin="153,8,0,0" VerticalAlignment="Top" Width="71"/>
                 <Button x:Name="buttonAccept" HorizontalAlignment="Left" Margin="242,54,0,0" VerticalAlignment="Top" Width="91" Height="60">
                     <TextBlock TextAlignment="Center" TextWrapping="Wrap">Одобрить заявку</TextBlock>
                 </Button>
                 <Button x:Name="buttonReject" HorizontalAlignment="Left" Margin="242,124,0,0" VerticalAlignment="Top" Width="91" Height="60">
                     <TextBlock TextAlignment="Center" TextWrapping="Wrap"><Run Text="Отклонить заявку"/></TextBlock>
                 </Button>
+                <ListView ItemsSource="{Binding CurentApplies}" DisplayMemberPath="Id" HorizontalAlignment="Left" Height="212" Margin="10,31,0,0" VerticalAlignment="Top" Width="214">
+                    <ListView.View>
+                        <GridView>
+                            <GridViewColumn/>
+                        </GridView>
+                    </ListView.View>
+                </ListView>
 
             </Grid>
         </GroupBox>

@@ -11,20 +11,22 @@ namespace ViewModel
 {
     public class OrganizerViewModel : ViewModelBase
     {
+        public Organizer CurentOrg { get; set; }
+        public List<Group> Groups { get; set; }
+        List<SchedulePart> CurentApplies { get; set; }
+
         public OrganizerViewModel()
         {
-            foreach (OrganizeEvent oe in CurentOrg.AllIvents)
+            foreach (SchedulePart sp in rep.GetScheduleParts())
             {
-                foreach(SchedulePart sp in oe.Schedule)
-                {
-                    if (!sp.IsChecked) CurentApplies.Add(sp); 
-                }
+                if (!sp.IsChecked && sp.OE.EventsOrganizer == CurentOrg) CurentApplies.Add(sp);
             }
         }
 
-        public Organizer CurentOrg { get; set; }
-        public List<SchedulePart> CurentApplies { get; set; }
-        //public List<OrganizeEvent> CurentOrgEvents = new List<OrganizeEvent>;       
+        
+
+        
+        //public List<OrganizeEvent> CurentOrgEvents { get; set; }       
 
         private RelayCommand _newEventClick;
         public RelayCommand NewEventClick
