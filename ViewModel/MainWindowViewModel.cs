@@ -45,7 +45,6 @@ namespace ViewModel
         }
         private void OnLoginClick()
         {
-
             OrganizerViewModel orgViewModel = new OrganizerViewModel();
             ViewModelManager.Instance.ViewModelShow(orgViewModel);
         }
