@@ -33,11 +33,7 @@
                     <TextBlock TextAlignment="Center" TextWrapping="Wrap"><Run Text="Отклонить заявку"/></TextBlock>
                 </Button>
                 <ListView ItemsSource="{Binding CurentApplies}" DisplayMemberPath="Id" HorizontalAlignment="Left" Height="212" Margin="10,31,0,0" VerticalAlignment="Top" Width="214">
-                    <ListView.View>
-                        <GridView>
-                            <GridViewColumn/>
-                        </GridView>
-                    </ListView.View>
+                   
                 </ListView>
 
             </Grid>

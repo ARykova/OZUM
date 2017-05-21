@@ -88,7 +88,7 @@ namespace ViewModel
             {
                 if (obj.Login == LoginField)
                 {
-                    OrganizerViewModel orgViewModel = new OrganizerViewModel() { CurentOrg = obj, Groups = Groups };
+                    OrganizerViewModel orgViewModel = new OrganizerViewModel() { CurentOrg = obj, GroupsOrg = Groups };
                     ViewModelManager.Instance.ViewModelShow(orgViewModel);
                 }
             }
