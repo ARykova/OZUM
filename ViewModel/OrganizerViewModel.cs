@@ -52,5 +52,16 @@ namespace ViewModel
             //доп логика выхода из аккаунта ???
             Close();
         }
+
+        private RelayCommand _changeProfileClick;
+        public RelayCommand ChangeProfileClick
+        {
+            get { return _changeProfileClick ?? (_changeProfileClick = new RelayCommand(OnChangeProfileClick)); }
+        }
+        private void OnChangeProfileClick()
+        {
+            ChangeProfileViewModel cpViewModel = new ChangeProfileViewModel();
+            ViewModelManager.Instance.ViewModelShow(cpViewModel);
+        }
     }
 }

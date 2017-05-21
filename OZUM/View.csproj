@@ -59,6 +59,9 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="ChangeProfileView.xaml.cs">
+      <DependentUpon>ChangeProfileView.xaml</DependentUpon>
+    </Compile>
     <Compile Include="ChangeScheduleView.xaml.cs">
       <DependentUpon>ChangeScheduleView.xaml</DependentUpon>
     </Compile>
@@ -82,6 +85,10 @@
     <Compile Include="ShowEventDetailsView.xaml.cs">
       <DependentUpon>ShowEventDetailsView.xaml</DependentUpon>
     </Compile>
+    <Page Include="ChangeProfileView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="ChangeScheduleView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>

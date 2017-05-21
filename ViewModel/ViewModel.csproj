@@ -43,6 +43,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ChangeProfileViewModel.cs" />
     <Compile Include="ChangeScheduleViewModel.cs" />
     <Compile Include="FillApplicationViewModel.cs" />
     <Compile Include="GroupViewModel.cs" />

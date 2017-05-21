@@ -54,6 +54,7 @@ namespace OZUM
                     {typeof(NewEventViewModel), typeof(NewEventView)},
                     {typeof(ShowEventDetailsViewModel), typeof(ShowEventDetailsView)},
                     {typeof(GroupViewModel), typeof(GroupView)},
+                    {typeof(ChangeProfileViewModel), typeof(ChangeProfileView)},
                 };
 
         private static readonly Dictionary<ViewModelBase, Window> OpenViewModelMapping
