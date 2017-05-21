@@ -43,10 +43,15 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ChangeScheduleViewModel.cs" />
+    <Compile Include="FillApplicationViewModel.cs" />
+    <Compile Include="GroupViewModel.cs" />
     <Compile Include="MainWindowViewModel.cs" />
+    <Compile Include="NewEventViewModel.cs" />
     <Compile Include="OrganizerViewModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="RegistrationViewModel.cs" />
+    <Compile Include="ShowEventDetailsViewModel.cs" />
     <Compile Include="ViewModelBase.cs" />
     <Compile Include="ViewModelManager.cs" />
   </ItemGroup>

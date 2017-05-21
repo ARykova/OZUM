@@ -48,7 +48,12 @@ namespace OZUM
                 {
                     {typeof(RegistrationViewModel), typeof(RegistrationView)},
                     {typeof(MainWindowViewModel), typeof(MainWindow)},
-                     {typeof(OrganizerViewModel), typeof(OrganizerView)},
+                    {typeof(OrganizerViewModel), typeof(OrganizerView)},
+                    {typeof(ChangeScheduleViewModel), typeof(ChangeScheduleView)},
+                    {typeof(FillApplicationViewModel), typeof(FillApplicationView)},
+                    {typeof(NewEventViewModel), typeof(NewEventView)},
+                    {typeof(ShowEventDetailsViewModel), typeof(ShowEventDetailsView)},
+                    {typeof(GroupViewModel), typeof(GroupView)},
                 };
 
         private static readonly Dictionary<ViewModelBase, Window> OpenViewModelMapping
