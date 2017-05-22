@@ -16,6 +16,7 @@ namespace ViewModel
         public List<SchedulePart> CurentApplies { get; set; }
         public SchedulePart CurentApply { get; set; }
         public SQLRepository rep = new SQLRepository();
+
         private string Message { get; set; }
         public OrganizerViewModel()
         {
@@ -41,7 +42,8 @@ namespace ViewModel
             get { return _acceptClick ?? (_acceptClick = new RelayCommand(OnAcceptClick)); }
         }
         private void OnAcceptClick()
-        {         
+        {
+            
             Message = "Заявка одобрена!";
             CurentApply.IsChecked = true;
             rep.ChangeSchedule(CurentApply, true);
@@ -55,6 +57,7 @@ namespace ViewModel
         }
         private void OnRejectClick()
         {
+            
             rep.ChangeSchedule(CurentApply, false);
             rep.Save();            
         }
@@ -70,6 +73,7 @@ namespace ViewModel
             ViewModelManager.Instance.ViewModelShow(csViewModel);
         }
 
+        public OrganizeEvent Chosen { get; set; }
         private RelayCommand _showEventDetailsClick;
         public RelayCommand ShowEventDetailsClick
         {
@@ -77,7 +81,7 @@ namespace ViewModel
         }
         private void OnShowEventDetailsClick()
         {
-            ShowEventDetailsViewModel sedViewModel = new ShowEventDetailsViewModel();
+            ShowEventDetailsViewModel sedViewModel = new ShowEventDetailsViewModel() { Eventyshe = Chosen};
             ViewModelManager.Instance.ViewModelShow(sedViewModel);
         }
 
@@ -99,7 +103,7 @@ namespace ViewModel
         }
         private void OnChangeProfileClick()
         {
-            ChangeProfileViewModel cpViewModel = new ChangeProfileViewModel();
+            ChangeProfileViewModel cpViewModel = new ChangeProfileViewModel() { OrgChangingSettings = CurentOrg, IsThisOrg = true};
             ViewModelManager.Instance.ViewModelShow(cpViewModel);
         }
     }

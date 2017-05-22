@@ -68,6 +68,7 @@ namespace ViewModel
         }
 
         public string LoginField { get; set; }
+        public string PasswordField { get; set; }
 
         private RelayCommand _loginClick;
         public RelayCommand LoginClick
@@ -81,7 +82,7 @@ namespace ViewModel
                 List<SchedulePart> accepted = new List<SchedulePart>();
                 List<SchedulePart> notaccepted = new List<SchedulePart>();
 
-                if (obj.Login == LoginField)
+                if (obj.Login == LoginField && obj.Password == PasswordField)
                 {
                     foreach (SchedulePart sp in obj.Applies)
                     {

@@ -70,7 +70,27 @@ namespace DataAccessLayer
             {
                 _context.ScheduleParts.Remove(_context.ScheduleParts.Find(s.Id));
             }
-        }        
+        }
+
+        public void ChangeGroupInformation(Group g)
+        {
+            _context.Groups.Find(g.Id).Password = g.Password;
+            _context.Groups.Find(g.Id).Name = g.Name;
+            _context.Groups.Find(g.Id).Information = g.Information;
+            _context.Groups.Find(g.Id).Telephone = g.Telephone;
+            _context.Groups.Find(g.Id).Mail = g.Mail;
+            
+        }
+
+        public void ChangeOrganizerInformation(Organizer o)
+        {
+            _context.Organizers.Find(o.Id).Password = o.Password;
+            _context.Organizers.Find(o.Id).Name = o.Name;
+            _context.Organizers.Find(o.Id).Information = o.Information;
+            _context.Organizers.Find(o.Id).Telephone = o.Telephone;
+            _context.Organizers.Find(o.Id).Mail = o.Mail;
+
+        }
 
         public void Save()
         {

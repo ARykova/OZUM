@@ -34,15 +34,16 @@ namespace ViewModel
         }
         private void OnSaveNewEventClick()
         {
+
+            OrganizeEvent NewOrgEvent = new OrganizeEvent();
+
+            NewOrgEvent.Name = NewName;
+            NewOrgEvent.Start = NewStart;
+            NewOrgEvent.Finish = NewEnd;
+            NewOrgEvent.Information = NewInformation;
+            NewOrgEvent.EventsOrganizer = CurentOrg;
+            
             var rep = new SQLRepository();
-            OrganizeEvent NewOrgEvent = new OrganizeEvent()
-            {
-                Name = NewName,
-                Start = NewStart,
-                Finish = NewEnd,
-                Information = NewInformation,
-                EventsOrganizer = CurentOrg
-            };
             rep.AddOrganizeEvent(NewOrgEvent);            
             rep.Save();
         }

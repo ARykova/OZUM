@@ -12,13 +12,13 @@
         <TextBlock HorizontalAlignment="Left" Margin="63,88,0,0" TextWrapping="Wrap" TextAlignment="Right" Text="Дополнительная информация:" VerticalAlignment="Top" Width="95"/>
         <TextBlock HorizontalAlignment="Left" Margin="108,179,0,0" TextWrapping="Wrap" Text="Телефон:" VerticalAlignment="Top"/>
         <TextBlock HorizontalAlignment="Left" Margin="127,208,0,0" TextWrapping="Wrap" Text="Email:" VerticalAlignment="Top"/>
-        <TextBox x:Name="textBoxPassword" HorizontalAlignment="Left" Height="23" Margin="163,28,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" KeyDown="textBoxPassword_KeyDown"/>
-        <TextBox x:Name="textBoxName" HorizontalAlignment="Left" Height="23" Margin="163,58,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" KeyUp="textBoxName_KeyUp"/>
-        <TextBox x:Name="textBoxInfo" HorizontalAlignment="Left" Height="85" Margin="163,88,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" KeyUp="textBoxInfo_KeyUp"/>
-        <TextBox x:Name="textBoxPhone" HorizontalAlignment="Left" Height="23" Margin="163,178,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" KeyUp="textBoxPhone_KeyUp"/>
-        <TextBox x:Name="textBoxEmail" HorizontalAlignment="Left" Height="23" Margin="163,208,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" KeyDown="textBoxEmail_KeyDown"/>
+        <TextBox Text ="{Binding Path=Password}" x:Name="textBoxPassword" HorizontalAlignment="Left" Height="23" Margin="163,28,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" KeyDown="textBoxPassword_KeyDown"/>
+        <TextBox Text ="{Binding Path=Name}" x:Name="textBoxName" HorizontalAlignment="Left" Height="23" Margin="163,58,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" KeyUp="textBoxName_KeyUp"/>
+        <TextBox Text ="{Binding Path=Information}" x:Name="textBoxInfo" HorizontalAlignment="Left" Height="85" Margin="163,88,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" KeyUp="textBoxInfo_KeyUp"/>
+        <TextBox Text ="{Binding Path=Phone}" x:Name="textBoxPhone" HorizontalAlignment="Left" Height="23" Margin="163,178,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" KeyUp="textBoxPhone_KeyUp"/>
+        <TextBox Text ="{Binding Path=Mail}" x:Name="textBoxEmail" HorizontalAlignment="Left" Height="23" Margin="163,208,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" KeyDown="textBoxEmail_KeyDown"/>
         <TextBlock HorizontalAlignment="Left" Margin="43,5,0,0" TextWrapping="Wrap" Text="Вы вошли, как" VerticalAlignment="Top"/>
-        <Button x:Name="buttonSaveProfileChanges" Content="Сохранить изменения" HorizontalAlignment="Left" Margin="143,236,0,0" VerticalAlignment="Top" Width="140" Height="27" IsEnabled="False"/>
+        <Button x:Name="buttonSaveProfileChanges" Command="{Binding SaveClick}" Content="Сохранить изменения" HorizontalAlignment="Left" Margin="143,236,0,0" VerticalAlignment="Top" Width="140" Height="27" IsEnabled="False"/>
         <Button x:Name="buttonCancel" Command="{Binding CancelClick}" Content="Отменить" HorizontalAlignment="Left" Margin="43,236,0,0" VerticalAlignment="Top" Width="95" Height="27"/>
         <Label Content="или организации:" HorizontalAlignment="Left" Margin="53,60,0,0" VerticalAlignment="Top"/>
 

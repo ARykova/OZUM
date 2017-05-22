@@ -66,7 +66,7 @@ namespace ViewModel
         }
         private void OnChangeProfileClick()
         {
-            ChangeProfileViewModel cpViewModel = new ChangeProfileViewModel();
+            ChangeProfileViewModel cpViewModel = new ChangeProfileViewModel() { GrpChangingSettings = CurrentGroup, IsThisOrg = false};
             ViewModelManager.Instance.ViewModelShow(cpViewModel);
         }
     }
